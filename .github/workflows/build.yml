@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - validate/*
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: aarnott/nbgv@v0.3
+      id: nbgv
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - run: yarn
+    - name: Build cloudbuild-task-contracts
+      run: yarn run build
+      working-directory: cloudbuild-task-contracts
+    - name: Build cloudbuild-task-github-actions
+      run: yarn run build
+      working-directory: cloudbuild-task-github-actions
+    - name: Build cloudbuild-task-azp
+      run: yarn run build
+      working-directory: cloudbuild-task-azp
+    - name: Build cloudbuild-task-local
+      run: yarn run build
+      working-directory: cloudbuild-task-local
+    - name: Stamping NPM versions
+      run: |
+        pushd cloudbuild-task-contracts ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
+        pushd cloudbuild-task-github-actions ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
+        pushd cloudbuild-task-azp ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
+        pushd cloudbuild-task-local ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
+        yarn up cloudbuild-task-contracts
+    - name: Pack
+      run: |
+        mkdir out
+        pushd cloudbuild-task-contracts ; yarn pack -o ../out/%s-v%v.tgz ; popd
+        pushd cloudbuild-task-github-actions ; yarn pack -o ../out/%s-v%v.tgz ; popd
+        pushd cloudbuild-task-azp ; yarn pack -o ../out/%s-v%v.tgz ; popd
+        pushd cloudbuild-task-local ; yarn pack -o ../out/%s-v%v.tgz ; popd
+    - name: Collect NPM package artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: NPM packages
+        path: out

@@ -1,0 +1,10 @@
+{
+	"private": true,
+	"name": "cloudbuild-task",
+	"workspaces": [
+		"cloudbuild-task-contracts",
+		"cloudbuild-task-github-actions",
+		"cloudbuild-task-azp",
+		"cloudbuild-task-local"
+	]
+}

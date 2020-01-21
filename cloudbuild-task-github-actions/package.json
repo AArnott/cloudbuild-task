@@ -1,0 +1,26 @@
+{
+	"name": "cloudbuild-task-github-actions",
+	"version": "0.1.0-alpha",
+	"description": "A GitHub Actions adapter for the cloudbuild-task-contracts.",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -watch"
+	},
+	"author": "Andrew Arnott <andrewarnott@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@actions/core": "^1.0.0",
+		"@actions/exec": "^1.0.0",
+		"@actions/github": "^1.0.0",
+		"@actions/io": "^1.0.0",
+		"@actions/tool-cache": "^1.0.0",
+		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
+	},
+	"devDependencies": {
+		"@types/node": "^13.1.8",
+		"jshint": "^2.11.0",
+		"tslint": "^6.0.0",
+		"typescript": "^3.7.5"
+	}
+}
