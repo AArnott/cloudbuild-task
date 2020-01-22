@@ -1,4 +1,4 @@
-import * as contracts from 'cloudbuild-task-contracts';
+import * as contracts from '@aarnott/cloudbuild-task-contracts';
 import * as azp from 'azure-pipelines-task-lib';
 
 export class Logger implements contracts.Logger {

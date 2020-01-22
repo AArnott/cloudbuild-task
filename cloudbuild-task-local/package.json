@@ -19,8 +19,8 @@
 	"author": "Andrew Arnott <andrewarnott@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"child_process": "^1.0.2",
-		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
+		"@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts",
+		"child_process": "^1.0.2"
 	},
 	"devDependencies": {
 		"@types/jest": "^24.9.0",
