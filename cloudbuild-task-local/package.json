@@ -1,5 +1,5 @@
 {
-	"name": "cloudbuild-task-local",
+	"name": "@aarnott/cloudbuild-task-local",
 	"version": "0.1.0-alpha",
 	"description": "A local node.js-only adapter for the cloudbuild-task-contracts.",
 	"main": "lib/index.js",
@@ -19,8 +19,8 @@
 	"author": "Andrew Arnott <andrewarnott@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
+		"@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts",
 		"child_process": "^1.0.2",
-		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts",
 		"simple-git": "^1.130.0"
 	},
 	"devDependencies": {

@@ -1,4 +1,4 @@
-import * as contracts from 'cloudbuild-task-contracts';
+import * as contracts from '@aarnott/cloudbuild-task-contracts';
 
 export class Inputs implements contracts.Inputs {
 	constructor(private readonly variables?: { [key: string]: string | boolean }) {

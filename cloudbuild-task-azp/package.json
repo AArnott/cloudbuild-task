@@ -1,5 +1,5 @@
 {
-	"name": "cloudbuild-task-azp",
+	"name": "@aarnott/cloudbuild-task-azp",
 	"version": "0.1.0-alpha",
 	"description": "An Azure Pipelines adapter for the cloudbuild-task-contracts.",
 	"main": "lib/index.js",
@@ -19,8 +19,8 @@
 	"author": "Andrew Arnott <andrewarnott@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"azure-pipelines-task-lib": "^2.9.3",
-		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
+		"@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts",
+		"azure-pipelines-task-lib": "^2.9.3"
 	},
 	"devDependencies": {
 		"@types/jest": "^24.9.0",

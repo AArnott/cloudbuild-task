@@ -7,10 +7,13 @@ $buildOrder =
 $buildOrder |% {
 	Write-Host -ForegroundColor Blue "Building $_"
 	Push-Location "$PSScriptRoot\$_"
-	yarn run build
-	if ($LASTEXITCODE -ne 0) {
-		exit $LASTEXITCODE
+	try {
+		yarn run build
+		if ($LASTEXITCODE -ne 0) {
+			exit $LASTEXITCODE
+		}
 	}
-
-	Pop-Location
+	finally {
+		Pop-Location
+	}
 }
