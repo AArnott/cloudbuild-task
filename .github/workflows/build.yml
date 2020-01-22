@@ -21,32 +21,15 @@ jobs:
       with:
         node-version: 10.x
     - run: yarn
-    - name: Build cloudbuild-task-contracts
-      run: yarn run build
-      working-directory: cloudbuild-task-contracts
-    - name: Build cloudbuild-task-github-actions
-      run: yarn run build
-      working-directory: cloudbuild-task-github-actions
-    - name: Build cloudbuild-task-azp
-      run: yarn run build
-      working-directory: cloudbuild-task-azp
-    - name: Build cloudbuild-task-local
-      run: yarn run build
-      working-directory: cloudbuild-task-local
+    - name: Build
+      run: ./build_all.ps1
+      shell: pwsh
     - name: Stamping NPM versions
-      run: |
-        pushd cloudbuild-task-contracts ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
-        pushd cloudbuild-task-github-actions ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
-        pushd cloudbuild-task-azp ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
-        pushd cloudbuild-task-local ; npm version ${{ steps.nbgv.outputs.NpmPackageVersion }} ; popd
-        yarn up cloudbuild-task-contracts
+      run: .github/workflows/set_version.ps1 -Version ${{ steps.nbgv.outputs.NpmPackageVersion }}
+      shell: pwsh
     - name: Pack
-      run: |
-        mkdir out
-        pushd cloudbuild-task-contracts ; yarn pack -o ../out/%s-v%v.tgz ; popd
-        pushd cloudbuild-task-github-actions ; yarn pack -o ../out/%s-v%v.tgz ; popd
-        pushd cloudbuild-task-azp ; yarn pack -o ../out/%s-v%v.tgz ; popd
-        pushd cloudbuild-task-local ; yarn pack -o ../out/%s-v%v.tgz ; popd
+      run: ./pack_all.ps1
+      shell: pwsh
     - name: Collect NPM package artifacts
       uses: actions/upload-artifact@v1
       with:
