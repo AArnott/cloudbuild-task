@@ -5,7 +5,8 @@
 	"main": "lib/index.js",
 	"scripts": {
 		"build": "tsc",
-		"watch": "tsc -watch"
+		"watch": "tsc -watch",
+		"test": "jest"
 	},
 	"repository": {
 		"type": "git",
@@ -26,8 +27,11 @@
 		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
 	},
 	"devDependencies": {
+		"@types/jest": "^24.9.0",
 		"@types/node": "^13.1.8",
+		"jest": "^24.0.0",
 		"jshint": "^2.11.0",
+		"ts-jest": "^24.3.0",
 		"tslint": "^6.0.0",
 		"typescript": "^3.7.5"
 	}

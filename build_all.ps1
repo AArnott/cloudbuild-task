@@ -1,9 +1,3 @@
-Write-Host -ForegroundColor Blue "Installing packages..."
-yarn
-if ($LASTEXITCODE -ne 0) {
-	exit $LASTEXITCODE
-}
-
 $buildOrder =
 	'cloudbuild-task-contracts',
 	'cloudbuild-task-azp',

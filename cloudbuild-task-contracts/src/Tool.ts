@@ -1,6 +1,6 @@
 import * as stream from 'stream';
 
-export interface IToolOptions {
+export interface ToolOptions {
 	/** optional working directory.  defaults to current */
 	cwd?: string;
 	/** optional envvar dictionary.  defaults to current process's env */
@@ -18,7 +18,7 @@ export interface IToolOptions {
 	errStream?: stream.Writable;
 }
 
-export interface ITool {
+export interface Tool {
 	/**
 	 * Exec a command.
 	 * Output will be streamed to the live console.
@@ -29,5 +29,5 @@ export interface ITool {
 	 * @param     options            optional exec options.  See ExecOptions
 	 * @returns   Promise<number>    exit code
 	 */
-	spawn(commandLine: string, args?: readonly string[], options?: IToolOptions): Promise<number>;
+	spawn(commandLine: string, args?: readonly string[], options?: ToolOptions): Promise<number>;
 }

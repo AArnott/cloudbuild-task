@@ -10,3 +10,4 @@ __tests__/runner/*
 lib/
 *.tgz
 out/
+/.taskkey
