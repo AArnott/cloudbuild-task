@@ -40,7 +40,11 @@ The `build_all.ps1` script will install packages and build all projects.
 
 ## Test
 
-TODO
+We use jest for our test framework.
+Within any project directory run `yarn jest` to execute the tests.
+Use `yarn jest --watch` to keep re-running tests on every save of a .ts file.
+
+The `test-all.ps1` script will run all tests.
 
 ## Tooling
 
