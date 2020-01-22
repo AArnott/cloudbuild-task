@@ -1,18 +1,26 @@
 {
-  "name": "cloudbuild-task-contracts",
-  "version": "0.1.0-alpha",
-  "description": "Abstractions that most/all cloud build services can fulfill in order to allow the development of tasks for submission to the various cloud build marketplaces while maintaining primarily just one codebase.",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "tsc",
-    "watch": "tsc -watch"
-  },
-  "author": "Andrew Arnott <andrewarnott@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^13.1.8",
-    "jshint": "^2.11.0",
-    "tslint": "^6.0.0",
-    "typescript": "^3.7.5"
-  }
+	"name": "cloudbuild-task-contracts",
+	"version": "0.1.0-alpha",
+	"description": "Abstractions that most/all cloud build services can fulfill in order to allow the development of tasks for submission to the various cloud build marketplaces while maintaining primarily just one codebase.",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aarnott/cloudbuild-task.git"
+	},
+	"bugs": {
+		"url": "https://github.com/aarnott/cloudbuild-task/issues"
+	},
+	"homepage": "https://github.com/aarnott/cloudbuild-task#readme",
+	"author": "Andrew Arnott <andrewarnott@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^13.1.8",
+		"jshint": "^2.11.0",
+		"tslint": "^6.0.0",
+		"typescript": "^3.7.5"
+	}
 }
