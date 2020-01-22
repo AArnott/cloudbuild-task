@@ -2,6 +2,7 @@ import * as contracts from 'cloudbuild-task-contracts';
 import { Tool } from './Tool';
 import { Logger } from './Logger';
 import { Inputs } from './Inputs';
+import { TaskResult } from './TaskResult';
 import * as task from 'azure-pipelines-task-lib/task';
 
 class AzurePipelinesFactory implements contracts.ICloudTaskFactory {
@@ -14,6 +15,7 @@ class AzurePipelinesFactory implements contracts.ICloudTaskFactory {
 		ref: task.getVariable('Build.SourceBranch'),
 		sha: task.getVariable('Build.SourceVersion')!,
 	};
+	readonly result: contracts.TaskResult = new TaskResult();
 
 	constructor() {
 		if (task.getVariable('Build.Reason') === 'PullRequest') {

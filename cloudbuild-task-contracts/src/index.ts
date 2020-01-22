@@ -2,6 +2,7 @@ import { Tool } from './Tool';
 import { Logger } from './Logger';
 import { Inputs } from './Inputs';
 import { PullRequest } from './PullRequest';
+import { TaskResult } from './TaskResult';
 
 /** Describes the branch, tag or commit being built. */
 export interface RepoInfo {
@@ -25,9 +26,12 @@ export interface ICloudTaskFactory {
 	readonly repo: RepoInfo;
 	/** Information on the pull request, if applicable. */
 	readonly pullRequest?: PullRequest;
+	/** Provides the ability to set the task's overall result. */
+	readonly result: TaskResult;
 }
 
 export * from './Tool';
 export * from './Logger';
 export * from './Inputs';
 export * from './PullRequest';
+export * from './TaskResult';

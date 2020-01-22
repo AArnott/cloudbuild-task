@@ -2,6 +2,7 @@ import * as contracts from 'cloudbuild-task-contracts';
 import { Tool } from './Tool';
 import { Logger } from './Logger';
 import { Inputs } from './Inputs';
+import { TaskResult } from './TaskResult';
 import * as github from '@actions/github';
 import * as Webhooks from '@octokit/webhooks'
 
@@ -14,6 +15,7 @@ class GitHubFactory implements contracts.ICloudTaskFactory {
 		ref: github.context.ref,
 		sha: github.context.sha,
 	};
+	readonly result: contracts.TaskResult = new TaskResult();
 	readonly pullRequest?: contracts.PullRequest;
 
 	constructor() {
