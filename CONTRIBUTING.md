@@ -32,6 +32,9 @@ To configure *your* VS Code IDE's language service to work in this repo, complet
 1. Choose "Select TypeScript Version"
 1. Pick "Use Workspace Version"
 
+Another caveat to not using `node_modules` is that F12 Go to Definition on imported types cannot jump to imported modules.
+VS Code has [fixing this on their backlog](https://github.com/microsoft/vscode/issues/75559). Please vote it up.
+
 ## Build
 
 Any individual project/package can be transpiled from TypeScript to Javascript by running `yarn run build` from that project directory.
@@ -43,6 +46,9 @@ The `build_all.ps1` script will install packages and build all projects.
 We use jest for our test framework.
 Use `yarn test` at the root to run all tests in the repo, or within an individual project directory to run just those tests.
 Use `yarn test --watch` to keep re-running tests on every save of a .ts file.
+
+The jest VS Code extension we're using doesn't seem to be able to debug tests.
+This is likely because of our use of yarn v2 which has no `node_modules` directory.
 
 ## Tooling
 

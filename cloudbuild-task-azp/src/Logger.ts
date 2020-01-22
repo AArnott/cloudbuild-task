@@ -1,12 +1,16 @@
 import * as contracts from '@aarnott/cloudbuild-task-contracts';
-import * as azp from 'azure-pipelines-task-lib';
+import * as task from 'azure-pipelines-task-lib/task';
 
 export class Logger implements contracts.Logger {
 	error(message: string) {
-		azp.logIssue(azp.IssueType.Error, message);
+		task.error(message);
 	}
 
 	warning(message: string) {
-		azp.logIssue(azp.IssueType.Warning, message);
+		task.warning(message);
+	}
+
+	debug(message: string) {
+		task.debug(message);
 	}
 }

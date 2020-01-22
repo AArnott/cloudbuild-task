@@ -18,6 +18,7 @@ export interface ToolOptions {
 	errStream?: stream.Writable;
 }
 
+/** Provides a facility to spawn tool processes and log their output. */
 export interface Tool {
 	/**
 	 * Exec a command.
