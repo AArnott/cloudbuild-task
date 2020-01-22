@@ -24,10 +24,19 @@ export class LocalFactory implements contracts.ICloudTaskFactory {
 			// Not a symbolic ref (e.g. a commit is checked out directly).
 		}
 
+		let remoteUri: string | undefined;
+		try {
+			remoteUri = await simpleGit.raw(['remote', 'get-url', 'origin']);
+		}
+		catch {
+			// no remote url, no problem.
+		}
+
 		const repo = {
 			path: process.cwd(),
 			sha: await simpleGit.revparse(['HEAD']),
 			ref: ref,
+			uri: remoteUri,
 		};
 		return new LocalFactory(repo, inputVariables);
 	}

@@ -20,9 +20,11 @@ describe('overall', () => {
 describe('repo', () => {
 	test('members', () => {
 		expect(factoryNoVars.repo.path).toBeDefined();
+		expect(factoryNoVars.repo.uri).toBeDefined();
 		console.debug(`path: ${factoryNoVars.repo.path}`);
 		console.debug(`sha: ${factoryNoVars.repo.sha}`);
 		console.debug(`ref: ${factoryNoVars.repo.ref}`);
+		console.debug(`uri: ${factoryNoVars.repo.uri}`);
 	});
 });
 

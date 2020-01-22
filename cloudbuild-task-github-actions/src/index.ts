@@ -14,6 +14,7 @@ class GitHubFactory implements contracts.ICloudTaskFactory {
 		path: process.cwd(),
 		ref: github.context.ref,
 		sha: github.context.sha,
+		uri: `https://github.com/${github.context.repo.owner}/${github.context.repo.repo}`,
 	};
 	readonly result: contracts.TaskResult = new TaskResult();
 	readonly pullRequest?: contracts.PullRequest;
