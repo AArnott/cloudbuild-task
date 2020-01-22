@@ -9,4 +9,8 @@ export class Logger implements contracts.Logger {
 	warning(message: string) {
 		core.warning(message);
 	}
+
+	debug(message: string) {
+		core.debug(message);
+	}
 }

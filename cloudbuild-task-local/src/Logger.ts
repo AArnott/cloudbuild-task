@@ -8,4 +8,8 @@ export class Logger implements contracts.Logger {
 	warning(message: string) {
 		console.warn(message);
 	}
+
+	debug(message: string) {
+		console.debug(message);
+	}
 }
