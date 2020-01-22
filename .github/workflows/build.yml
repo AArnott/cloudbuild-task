@@ -25,6 +25,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
+        registry-url: https://npm.pkg.github.com
     - run: yarn
     - name: Build
       run: ./build_all.ps1
@@ -42,3 +43,16 @@ jobs:
       with:
         name: NPM packages
         path: out
+    - name: Publish NPM packages to GitHub Registry
+      run: |
+        Get-ChildItem *.tgz |% {
+          npm publish $_
+          if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+          }
+        }
+      shell: pwsh
+      working-directory: out
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

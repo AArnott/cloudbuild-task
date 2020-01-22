@@ -1,5 +1,5 @@
 {
-	"name": "cloudbuild-task-github-actions",
+	"name": "@aarnott/cloudbuild-task-github-actions",
 	"version": "0.1.0-alpha",
 	"description": "A GitHub Actions adapter for the cloudbuild-task-contracts.",
 	"main": "lib/index.js",
