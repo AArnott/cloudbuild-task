@@ -23,7 +23,7 @@
 		"@actions/github": "^1.0.0",
 		"@actions/io": "^1.0.0",
 		"@actions/tool-cache": "^1.0.0",
-		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
+		"cloudbuild-task-contracts": "0.1.0-alpha"
 	},
 	"devDependencies": {
 		"@types/node": "^13.1.8",

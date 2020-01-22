@@ -22,16 +22,6 @@ Restore packages with `yarn`, from anywhere in the repo. It is not necessary to 
 
 Do **not** use `npm` to install packages. This repo is incompatible with npm.
 
-## Editing
-
-Because we use Yarn 2 and don't use `node_modules` any more, [the TypeScript language service has to be configured](https://next.yarnpkg.com/advanced/editor-sdks#vscode) to work properly in this mode.
-To configure *your* VS Code IDE's language service to work in this repo, complete these steps:
-
-1. Open any .ts file in this repo.
-1. Press Ctrl+Shift+P
-1. Choose "Select TypeScript Version"
-1. Pick "Use Workspace Version"
-
 ## Build
 
 Any individual project/package can be transpiled from TypeScript to Javascript by running `yarn run build` from that project directory.

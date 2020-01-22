@@ -3,11 +3,10 @@ if (!(Test-Path "$PSScriptRoot\out")) {
 }
 
 Get-ChildItem "$PSScriptRoot\cloudbuild-task-*" |% {
-	Push-Location $_.FullName
-	yarn pack -o ../out/%s-v%v.tgz
+	yarn pack --non-interactive --cwd $_.Name
 	if ($LASTEXITCODE -ne 0) {
 		exit $LASTEXITCODE
 	}
 
-	Pop-Location
+	Move-Item -Path "$($_.FullName)\cloudbuild-task-*.tgz" -Destination "$PSScriptRoot\out"
 }

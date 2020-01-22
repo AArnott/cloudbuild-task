@@ -20,7 +20,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"child_process": "^1.0.2",
-		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
+		"cloudbuild-task-contracts": "0.1.0-alpha"
 	},
 	"devDependencies": {
 		"@types/jest": "^24.9.0",
