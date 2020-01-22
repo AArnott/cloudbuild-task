@@ -3,6 +3,7 @@ import { Logger } from './Logger';
 import { Inputs } from './Inputs';
 import { PullRequest } from './PullRequest';
 import { TaskResult } from './TaskResult';
+import { Artifacts } from './Artifacts';
 
 /** Describes the branch, tag or commit being built. */
 export interface RepoInfo {
@@ -28,6 +29,8 @@ export interface ICloudTaskFactory {
 	readonly pullRequest?: PullRequest;
 	/** Provides the ability to set the task's overall result. */
 	readonly result: TaskResult;
+	/** Exposes APIs to publish artifacts, if supported by the cloud build system. */
+	readonly artifacts?: Artifacts;
 }
 
 export * from './Tool';
@@ -35,3 +38,4 @@ export * from './Logger';
 export * from './Inputs';
 export * from './PullRequest';
 export * from './TaskResult';
+export * from './Artifacts';

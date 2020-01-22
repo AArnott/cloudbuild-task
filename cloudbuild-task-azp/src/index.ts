@@ -3,6 +3,7 @@ import { Tool } from './Tool';
 import { Logger } from './Logger';
 import { Inputs } from './Inputs';
 import { TaskResult } from './TaskResult';
+import { Artifacts } from './Artifacts';
 import * as task from 'azure-pipelines-task-lib/task';
 
 class AzurePipelinesFactory implements contracts.ICloudTaskFactory {
@@ -16,6 +17,7 @@ class AzurePipelinesFactory implements contracts.ICloudTaskFactory {
 		sha: task.getVariable('Build.SourceVersion')!,
 	};
 	readonly result: contracts.TaskResult = new TaskResult();
+	readonly artifacts: contracts.Artifacts = new Artifacts();
 
 	constructor() {
 		if (task.getVariable('Build.Reason') === 'PullRequest') {
