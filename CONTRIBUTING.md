@@ -7,6 +7,8 @@ Building and contributing to this repo requires the following dependencies:
 1. [Node.js](https://nodejs.org/) v10 or later.
 1. [yarn](https://www.npmjs.com/package/yarn)
 
+We recommend using [VS Code](https://code.visualstudio.com/) for development.
+
 ## Repo structure
 
 This repo uses [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to build several NPM packages from a single repo.
@@ -14,9 +16,23 @@ Each of these packages build from a top-level folder in the repo starting with `
 
 These NPM packages are all written in TypeScript.
 
-## Build
+## Restore packages
 
 Restore packages with `yarn`, from anywhere in the repo. It is not necessary to run `yarn` from multiple directories.
+
+Do **not** use `npm` to install packages. This repo is incompatible with npm.
+
+## Editing
+
+Because we use Yarn 2 and don't use `node_modules` any more, [the TypeScript language service has to be configured](https://next.yarnpkg.com/advanced/editor-sdks#vscode) to work properly in this mode.
+To configure *your* VS Code IDE's language service to work in this repo, complete these steps:
+
+1. Open any .ts file in this repo.
+1. Press Ctrl+Shift+P
+1. Choose "Select TypeScript Version"
+1. Pick "Use Workspace Version"
+
+## Build
 
 Any individual project/package can be transpiled from TypeScript to Javascript by running `yarn run build` from that project directory.
 

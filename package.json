@@ -6,5 +6,9 @@
 		"cloudbuild-task-github-actions",
 		"cloudbuild-task-azp",
 		"cloudbuild-task-local"
-	]
+	],
+	"devDependencies": {
+		"@yarnpkg/pnpify": "^2.0.0-rc.15",
+		"typescript": "^3.7.5"
+	}
 }
