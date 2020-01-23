@@ -19,8 +19,11 @@
 	"author": "Andrew Arnott <andrewarnott@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
+		"@types/jest": "^24.9.1",
 		"@types/node": "^13.1.8",
+		"jest": "^25.1.0",
 		"jshint": "^2.11.0",
+		"ts-jest": "^25.0.0",
 		"tslint": "^6.0.0",
 		"typescript": "^3.7.5"
 	}

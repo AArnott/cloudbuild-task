@@ -1,9 +1,9 @@
-const GITHUB_REPOSITORY_old = process.env.GITHUB_REPOSITORY;
+const old_GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY;
 process.env.GITHUB_REPOSITORY = 'O/R';
 import { factory } from '../index';
 
 afterAll(() => {
-	process.env.GITHUB_REPOSITORY = GITHUB_REPOSITORY_old;
+	process.env.GITHUB_REPOSITORY = old_GITHUB_REPOSITORY;
 });
 
 
