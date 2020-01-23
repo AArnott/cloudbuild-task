@@ -13,6 +13,8 @@ export interface RepoInfo {
 	ref?: string;
 	/** The full git commit ID that was checked out. */
 	sha: string;
+	/** The git remote URL */
+	uri?: string;
 }
 
 /** Provides cloud build functionality for tasks. */
