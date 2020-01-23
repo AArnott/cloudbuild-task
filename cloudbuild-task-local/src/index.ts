@@ -5,7 +5,7 @@ import { Inputs } from "./Inputs";
 import { TaskResult } from "./TaskResult";
 const simpleGit = require('simple-git/promise')();
 
-export class LocalFactory implements contracts.ICloudTaskFactory {
+export class LocalFactory implements contracts.CloudTask {
 	readonly tool: contracts.Tool = new Tool();
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs;

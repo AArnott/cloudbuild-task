@@ -6,7 +6,7 @@ import { TaskResult } from './TaskResult';
 import * as github from '@actions/github';
 import * as Webhooks from '@octokit/webhooks'
 
-class GitHubFactory implements contracts.ICloudTaskFactory {
+class GitHubFactory implements contracts.CloudTask {
 	readonly tool: contracts.Tool = new Tool();
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs = new Inputs();
@@ -31,4 +31,4 @@ class GitHubFactory implements contracts.ICloudTaskFactory {
 	}
 }
 
-export const factory: contracts.ICloudTaskFactory = new GitHubFactory();
+export const factory: contracts.CloudTask = new GitHubFactory();

@@ -6,7 +6,7 @@ import { TaskResult } from './TaskResult';
 import { Artifacts } from './Artifacts';
 import * as task from 'azure-pipelines-task-lib/task';
 
-class AzurePipelinesFactory implements contracts.ICloudTaskFactory {
+class AzurePipelinesFactory implements contracts.CloudTask {
 	readonly tool: contracts.Tool = new Tool();
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs = new Inputs();
@@ -48,4 +48,4 @@ class AzurePipelinesFactory implements contracts.ICloudTaskFactory {
 	}
 }
 
-export const factory: contracts.ICloudTaskFactory = new AzurePipelinesFactory();
+export const factory: contracts.CloudTask = new AzurePipelinesFactory();
