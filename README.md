@@ -47,14 +47,14 @@ and log an error including its value and fail the task run:
 import { CloudTask } from '@aarnott/cloudbuild-task-contracts';
 
 export class MyTask {
-	constructor(private cloudTask: CloudTask) {
-	}
+  constructor(private cloudTask: CloudTask) {
+  }
 
-	run() {
-		const name = this.cloudTask.inputs.getInput('name');
-		this.cloudTask.log.error(`That is not an acceptable name: ${name}.`);
-		this.cloudTask.result.setFailed('Invalid input parameter.');
-	}
+  run() {
+    const name = this.cloudTask.inputs.getInput('name');
+    this.cloudTask.log.error(`That is not an acceptable name: ${name}.`);
+    this.cloudTask.result.setFailed('Invalid input parameter.');
+  }
 }
 ```
 

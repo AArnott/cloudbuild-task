@@ -13,3 +13,8 @@ indent_size = 2
 
 [*.yml]
 indent_style = space
+
+# GitHub renders tabs in markdown files with a tab size of 8, so use spaces instead.
+[*.md]
+indent_style = space
+indent_size = 2
