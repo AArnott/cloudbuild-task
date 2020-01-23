@@ -29,7 +29,7 @@ Design your task as a 'core' NPM package that contains most of your build logic.
 This should depend on the `@aarnott/cloudbuild-task-contracts` NPM package.
 It should *not* depend on any cloud build specific package.
 
-This core package should export a class (or method) that accepts a `CloudTask`.
+This core package should export a class or method that accepts a `CloudTask`.
 All cloud build interactions should go through this abstraction.
 [This `CloudTask` interface][CloudTask] provides functionality such as:
 
@@ -46,15 +46,10 @@ and log an error including its value and fail the task run:
 ```ts
 import { CloudTask } from '@aarnott/cloudbuild-task-contracts';
 
-export class MyTask {
-  constructor(private cloudTask: CloudTask) {
-  }
-
-  run() {
-    const name = this.cloudTask.inputs.getInput('name');
-    this.cloudTask.log.error(`That is not an acceptable name: ${name}.`);
-    this.cloudTask.result.setFailed('Invalid input parameter.');
-  }
+export function run(cloudTask: CloudTask) {
+  const name = cloudTask.inputs.getInput('name');
+  cloudTask.log.error(`That is not an acceptable name: ${name}.`);
+  cloudTask.result.setFailed('Invalid input parameter.');
 }
 ```
 
@@ -71,10 +66,9 @@ For an Azure Pipelines task, you might code it up like this:
 
 ```ts
 import { factory } from '@aarnott/cloudbuild-task-azp';
-import { MyTask } from './MyTask';
+import { run } from './MyTask';
 
-const task = new MyTask(factory);
-task.run();
+run(factory);
 ```
 
 While for a GitHub Actions task it is nearly identical.
@@ -82,10 +76,9 @@ The only change is the package you get the factory from:
 
 ```ts
 import { factory } from '@aarnott/cloudbuild-task-github-actions';
-import { MyTask } from './MyTask';
+import { run } from './MyTask';
 
-const task = new MyTask(factory);
-task.run();
+run(factory);
 ```
 
 ## Contributing
