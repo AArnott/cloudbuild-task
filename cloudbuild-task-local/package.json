@@ -10,7 +10,8 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/aarnott/cloudbuild-task.git"
+		"url": "https://github.com/aarnott/cloudbuild-task.git",
+		"directory": "cloudbuild-task-local"
 	},
 	"bugs": {
 		"url": "https://github.com/aarnott/cloudbuild-task/issues"
