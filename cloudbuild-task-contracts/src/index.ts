@@ -6,3 +6,4 @@ export * from './TaskResult';
 export * from './Artifacts';
 export * from './RepoInfo';
 export * from './CloudTask';
+export * from './CloudTaskUtilities';
