@@ -1,3 +1,4 @@
+// tslint:disable-next-line: variable-name
 const old_GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY;
 process.env.GITHUB_REPOSITORY = 'O/R';
 import { factory } from '../index';

@@ -6,10 +6,10 @@ import { TaskResult } from "./TaskResult";
 const simpleGit = require('simple-git/promise')();
 
 export class LocalFactory implements contracts.CloudTask {
-	readonly tool: contracts.Tool = new Tool();
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs;
-	readonly result: contracts.TaskResult = new TaskResult();
+	readonly result = new TaskResult();
+	readonly tool = new Tool(this.result);
 
 	constructor(public readonly repo: contracts.RepoInfo, inputVariables?: { [key: string]: string | boolean }) {
 		this.inputs = new Inputs(inputVariables);
@@ -17,6 +17,7 @@ export class LocalFactory implements contracts.CloudTask {
 
 	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }): Promise<LocalFactory> {
 		let ref: string | undefined;
+		simpleGit.silent(true); // don't fail tests or tasks when stderr is written and/or exit code indicates failure.
 		try {
 			ref = await simpleGit.raw(['symbolic-ref', 'HEAD']);
 		}

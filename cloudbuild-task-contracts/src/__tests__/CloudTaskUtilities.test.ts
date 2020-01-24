@@ -1,4 +1,4 @@
-import * as util from '../CloudTaskUtilities';
+import { Utilities as util } from '../CloudTaskUtilities';
 
 describe('parseArguments', () => {
 	it('parses one arg', () => {
@@ -6,7 +6,7 @@ describe('parseArguments', () => {
 	});
 
 	it('parses simple arguments', () => {
-		expect(util.parseArguments('a b c')).toEqual(['a','b','c']);
+		expect(util.parseArguments('a b c')).toEqual(['a', 'b', 'c']);
 	});
 
 	it('parses one quoted arg', () => {
@@ -14,7 +14,7 @@ describe('parseArguments', () => {
 	});
 
 	it('parses several simple and complex arguments', () => {
-		expect(util.parseArguments('a "b c" d')).toEqual(['a','b c','d']);
+		expect(util.parseArguments('a "b c" d')).toEqual(['a', 'b c', 'd']);
 	});
 
 	it('empty string handling', () => {

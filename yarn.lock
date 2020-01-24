@@ -62,10 +62,12 @@ __metadata:
     "@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
     "@types/jest": ^24.9.0
     "@types/node": ^13.1.8
+    "@types/stream-buffers": ^3.0.3
     child_process: ^1.0.2
     jest: ^24.0.0
     jshint: ^2.11.0
     simple-git: ^1.130.0
+    stream-buffers: ^3.0.2
     ts-jest: ^24.3.0
     tslint: ^6.0.0
     typescript: ^3.7.5
@@ -874,7 +876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:>= 8, @types/node@npm:^13.1.8":
+"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^13.1.8":
   version: 13.1.8
   resolution: "@types/node@npm:13.1.8"
   checksum: 0dbe0a416ce3812115c169a0efd67558a373541e61d1cdb627b3d0a180c8fe892a0480c9fff338ffe0dc915958b3664385f14babea3346624557da5bbd8439f9
@@ -885,6 +887,15 @@ __metadata:
   version: 1.0.1
   resolution: "@types/stack-utils@npm:1.0.1"
   checksum: 5dc06076f3ed8dfa61f65584b9fb956079fc45c6b2ae2902e608df3b1494c0c4b35d29e63c51427cce2ec28925076d0f393ec6faf3a003dad24dc1b8a578f96b
+  languageName: node
+  linkType: hard
+
+"@types/stream-buffers@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@types/stream-buffers@npm:3.0.3"
+  dependencies:
+    "@types/node": "*"
+  checksum: 03f6dd3a02138fbf94cf8a7113a021e7e884aaf3ddee51c051aa0362d136605bd56772012cd240adc95a04a35dda20faabf1cd21a423a880f48b2de9836a8af1
   languageName: node
   linkType: hard
 
@@ -1455,7 +1466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bs-logger@npm:0.x":
+"bs-logger@npm:0.x, bs-logger@npm:^0.2.6":
   version: 0.2.6
   resolution: "bs-logger@npm:0.2.6"
   dependencies:
@@ -1640,6 +1651,7 @@ __metadata:
   dependencies:
     "@types/jest": ^24.9.0
     "@yarnpkg/pnpify": ^2.0.0-rc.15
+    bs-logger: ^0.2.6
     jest: ^24.0.0
     jshint: ^2.11.0
     ts-jest: ^24.3.0
@@ -6015,6 +6027,13 @@ resolve@1.1.7:
   version: 1.1.1
   resolution: "stealthy-require@npm:1.1.1"
   checksum: ac27495d1a1d6018109606146a83203471ef1ebadac2c4cd3ea6fd5468596f0a0ba2d5cfcb2d5ffb3a77f8e80379a6ecfd496fbf5a224e9ab88fd675eecf4941
+  languageName: node
+  linkType: hard
+
+"stream-buffers@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "stream-buffers@npm:3.0.2"
+  checksum: 656a1620cf8a13900b13d21c642b07e0be54b3e690d5cc4a1143a612582385df177cbb22fde317e08d9e49c3e7741208f7b3cda65009b15c3ccc2fc35ffcf6ed
   languageName: node
   linkType: hard
 
