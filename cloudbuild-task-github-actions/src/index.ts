@@ -2,6 +2,7 @@ import * as contracts from '@aarnott/cloudbuild-task-contracts';
 import { Tool } from './Tool';
 import { Logger } from './Logger';
 import { Inputs } from './Inputs';
+import { Outputs } from './Outputs';
 import { TaskResult } from './TaskResult';
 import * as github from '@actions/github';
 import * as Webhooks from '@octokit/webhooks'
@@ -10,6 +11,7 @@ class GitHubFactory implements contracts.CloudTask {
 	readonly tool: contracts.Tool = new Tool();
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs = new Inputs();
+	readonly outputs: contracts.Outputs = new Outputs();
 	readonly repo = {
 		path: process.cwd(),
 		ref: github.context.ref,

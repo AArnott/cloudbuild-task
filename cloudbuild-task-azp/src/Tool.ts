@@ -32,4 +32,8 @@ export class Tool implements contracts.Tool {
 			silent: options?.silent ?? false,
 		});
 	}
+
+	prependPath(path: string) {
+		task.prependPath(path);
+	}
 }

@@ -2,6 +2,7 @@ import * as contracts from '@aarnott/cloudbuild-task-contracts';
 import { Tool } from './Tool';
 import { Logger } from './Logger';
 import { Inputs } from './Inputs';
+import { Outputs } from './Outputs';
 import { TaskResult } from './TaskResult';
 import { Artifacts } from './Artifacts';
 import * as task from 'azure-pipelines-task-lib/task';
@@ -10,6 +11,7 @@ class AzurePipelinesFactory implements contracts.CloudTask {
 	readonly tool: contracts.Tool = new Tool();
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs = new Inputs();
+	readonly outputs: contracts.Outputs = new Outputs();
 	readonly pullRequest?: contracts.PullRequest;
 	readonly repo = {
 		path: task.getVariable('Build.SourcesDirectory')!,
