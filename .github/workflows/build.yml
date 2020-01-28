@@ -9,7 +9,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+        - ubuntu-18.04
+        - macos-latest
+        - windows-latest
+
     steps:
     - uses: actions/checkout@v2
       with:
@@ -32,17 +39,21 @@ jobs:
       shell: pwsh
     - name: Test
       run: yarn test
+
     - name: Stamping NPM versions
       run: .github/workflows/set_version.ps1 -Version ${{ steps.nbgv.outputs.NpmPackageVersion }}
       shell: pwsh
+      if: runner.os == 'Linux'
     - name: Pack
       run: ./pack_all.ps1
       shell: pwsh
+      if: runner.os == 'Linux'
     - name: Collect NPM package artifacts
       uses: actions/upload-artifact@v1
       with:
         name: NPM packages
         path: out
+      if: runner.os == 'Linux'
     - name: Publish NPM packages to GitHub Registry
       run: |
         Get-ChildItem *.tgz |% {
@@ -53,6 +64,6 @@ jobs:
         }
       shell: pwsh
       working-directory: out
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master' && runner.os == 'Linux'
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
