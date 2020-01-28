@@ -2,12 +2,14 @@ import * as contracts from "@aarnott/cloudbuild-task-contracts";
 import { Tool } from "./Tool";
 import { Logger } from "./Logger";
 import { Inputs } from "./Inputs";
+import { Outputs } from "./Outputs";
 import { TaskResult } from "./TaskResult";
 const simpleGit = require('simple-git/promise')();
 
 export class LocalFactory implements contracts.CloudTask {
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs;
+	readonly outputs: contracts.Outputs = new Outputs(this.log);
 	readonly result = new TaskResult();
 	readonly tool = new Tool(this.result);
 	readonly temp: string;

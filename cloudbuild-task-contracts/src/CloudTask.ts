@@ -5,6 +5,7 @@ import { PullRequest } from './PullRequest';
 import { TaskResult } from './TaskResult';
 import { Artifacts } from './Artifacts';
 import { RepoInfo } from './RepoInfo';
+import { Outputs } from './Outputs';
 
 /** Provides cloud build functionality for tasks. */
 export interface CloudTask {
@@ -14,6 +15,8 @@ export interface CloudTask {
 	readonly log: Logger;
 	/** Provides access to input parameters to the task. */
 	readonly inputs: Inputs;
+	/** Allows setting of variables for subsequent tasks to read. */
+	readonly outputs: Outputs;
 	/** Information about the repo and its initial state. */
 	readonly repo: RepoInfo;
 	/** The path to a temporary directory on the agent that is always clean at the start of a job. */
