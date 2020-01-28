@@ -2,6 +2,9 @@ import * as contracts from '@aarnott/cloudbuild-task-contracts';
 import * as task from 'azure-pipelines-task-lib/task';
 
 export class Logger implements contracts.Logger {
+	setSecret(secret: string): void {
+		task.setSecret(secret);
+	}
 	error(message: string) {
 		task.error(message);
 	}
