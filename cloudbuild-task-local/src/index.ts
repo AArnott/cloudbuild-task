@@ -1,4 +1,5 @@
 import * as contracts from "@aarnott/cloudbuild-task-contracts";
+import * as os from 'os';
 import { Tool } from "./Tool";
 import { Logger } from "./Logger";
 import { Inputs } from "./Inputs";
@@ -16,16 +17,10 @@ export class LocalFactory implements contracts.CloudTask {
 
 	constructor(public readonly repo: contracts.RepoInfo, inputVariables?: { [key: string]: string | boolean }, temp?: string) {
 		this.inputs = new Inputs(inputVariables);
-		if (temp) {
-			this.temp = temp;
-		} else if (process.env.TEMP) {
-			this.temp = process.env.TEMP;
-		} else {
-			throw new Error("No temp argument provided and no TEMP environment variable set.");
-		}
+		this.temp = temp || os.tmpdir();
 	}
 
-	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }, temp?: string): Promise<LocalFactory> {
+	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }, tempDirectory?: string): Promise<LocalFactory> {
 		let ref: string | undefined;
 		simpleGit.silent(true); // don't fail tests or tasks when stderr is written and/or exit code indicates failure.
 		try {
@@ -49,6 +44,6 @@ export class LocalFactory implements contracts.CloudTask {
 			ref: ref,
 			uri: remoteUri,
 		};
-		return new LocalFactory(repo, inputVariables, temp);
+		return new LocalFactory(repo, inputVariables, tempDirectory);
 	}
 }
