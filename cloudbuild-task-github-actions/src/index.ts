@@ -16,6 +16,7 @@ class GitHubFactory implements contracts.CloudTask {
 		sha: github.context.sha,
 		uri: `https://github.com/${github.context.repo.owner}/${github.context.repo.repo}`,
 	};
+	readonly temp = process.env.RUNNER_TEMP!;
 	readonly result: contracts.TaskResult = new TaskResult();
 	readonly pullRequest?: contracts.PullRequest;
 

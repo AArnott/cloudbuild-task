@@ -16,6 +16,8 @@ export interface CloudTask {
 	readonly inputs: Inputs;
 	/** Information about the repo and its initial state. */
 	readonly repo: RepoInfo;
+	/** The path to a temporary directory on the agent that is always clean at the start of a job. */
+	readonly temp: string;
 	/** Information on the pull request, if applicable. */
 	readonly pullRequest?: PullRequest;
 	/** Provides the ability to set the task's overall result. */
