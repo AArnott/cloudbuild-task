@@ -17,6 +17,7 @@ class AzurePipelinesFactory implements contracts.CloudTask {
 		sha: task.getVariable('Build.SourceVersion')!,
 		uri: task.getVariable('Build.Repository.Uri'),
 	};
+	readonly temp = task.getVariable('Agent.TempDirectory')!;
 	readonly result: contracts.TaskResult = new TaskResult();
 	readonly artifacts: contracts.Artifacts = new Artifacts();
 

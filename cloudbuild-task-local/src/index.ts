@@ -10,12 +10,20 @@ export class LocalFactory implements contracts.CloudTask {
 	readonly inputs: contracts.Inputs;
 	readonly result = new TaskResult();
 	readonly tool = new Tool(this.result);
+	readonly temp: string;
 
-	constructor(public readonly repo: contracts.RepoInfo, inputVariables?: { [key: string]: string | boolean }) {
+	constructor(public readonly repo: contracts.RepoInfo, inputVariables?: { [key: string]: string | boolean }, temp?: string) {
 		this.inputs = new Inputs(inputVariables);
+		if (temp) {
+			this.temp = temp;
+		} else if (process.env.TEMP) {
+			this.temp = process.env.TEMP;
+		} else {
+			throw new Error("No temp argument provided and no TEMP environment variable set.");
+		}
 	}
 
-	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }): Promise<LocalFactory> {
+	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }, temp?: string): Promise<LocalFactory> {
 		let ref: string | undefined;
 		simpleGit.silent(true); // don't fail tests or tasks when stderr is written and/or exit code indicates failure.
 		try {
@@ -39,6 +47,6 @@ export class LocalFactory implements contracts.CloudTask {
 			ref: ref,
 			uri: remoteUri,
 		};
-		return new LocalFactory(repo, inputVariables);
+		return new LocalFactory(repo, inputVariables, temp);
 	}
 }

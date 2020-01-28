@@ -5,10 +5,11 @@ import { LocalFactory } from '../index';
 let factoryNoVars: LocalFactory;
 let factoryVars: LocalFactory;
 const osQuote = process.platform == 'win32' ? '"' : '';
+const tempPath = "/some/temp/path";
 
 beforeEach(async () => {
-	factoryNoVars = await LocalFactory.CreateAsync();
-	factoryVars = await LocalFactory.CreateAsync({ "strVar": "someString", "boolVar": true });
+	factoryNoVars = await LocalFactory.CreateAsync(undefined, tempPath);
+	factoryVars = await LocalFactory.CreateAsync({ "strVar": "someString", "boolVar": true }, tempPath);
 
 	// Avoid writing to console.error during testing as that causes failures in our CI/PR system.
 	factoryNoVars.result.silent = true;
@@ -22,6 +23,10 @@ describe('overall', () => {
 		expect(factoryNoVars.inputs).toBeDefined();
 		expect(factoryNoVars.repo).toBeDefined();
 	});
+});
+
+test('temp', () => {
+	expect(factoryNoVars.temp).toEqual(tempPath);
 });
 
 describe('repo', () => {

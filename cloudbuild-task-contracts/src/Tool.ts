@@ -12,7 +12,7 @@ export interface ToolOptions {
 	/** optional.  defaults to false */
 	silent?: boolean;
 
-	/** optional.  defaults to failing on non zero.  ignore will not fail leaving it up to the caller */
+	/** optional.  defaults to false (i.e. failing on non-zero). A value of true (ignore) will not produce a failure, leaving it up to the caller. */
 	ignoreReturnCode?: boolean;
 
 	/** optional out stream to use. Defaults to process.stdout */
