@@ -41,4 +41,7 @@ export interface Tool {
 	 * @returns   Promise<number>    exit code
 	 */
 	spawn(commandLine: string, args?: readonly string[] | string, options?: ToolOptions): Promise<number>;
+
+	/** Prepends some directory to the system PATH for this and subsequent tasks so that a tool may be found there. */
+	prependPath(path: string): void;
 }

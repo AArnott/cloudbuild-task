@@ -4,6 +4,8 @@ import * as contracts from '@aarnott/cloudbuild-task-contracts';
 import { TaskResult } from './TaskResult';
 import { Transform, Writable } from 'stream';
 
+const pathSeparator = os.platform() === 'win32' ? ';' : ':';
+
 export class Tool implements contracts.Tool {
 	constructor(private readonly result: TaskResult) {
 	}
@@ -73,6 +75,10 @@ export class Tool implements contracts.Tool {
 				});
 				tool.on('error', (error) => reject(error));
 			});
+	}
+
+	prependPath(path: string) {
+		process.env.PATH = `${path}${pathSeparator}${process.env.PATH}`;
 	}
 
 	private static getCommandString(toolPath: string, args: string[], options?: contracts.ToolOptions, noPrefix?: boolean): string {

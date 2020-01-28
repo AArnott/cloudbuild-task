@@ -1,5 +1,6 @@
 import * as contracts from '@aarnott/cloudbuild-task-contracts';
 import { exec } from '@actions/exec';
+import * as core from '@actions/core';
 
 export class Tool implements contracts.Tool {
 	spawn(commandLine: string, args?: string[] | string, options?: contracts.ToolOptions): Promise<number> {
@@ -14,5 +15,9 @@ export class Tool implements contracts.Tool {
 		// The `as` cast below isn't really necessary except that jest's typescript compiler
 		// can't see that the type is already constrained to these two.
 		return exec(commandLine, args as string[] | undefined, options);
+	}
+
+	prependPath(path: string) {
+		core.addPath(path);
 	}
 }
