@@ -5,4 +5,8 @@ export class Outputs implements contracts.Outputs {
 	setVariable(name: string, value: string): void {
 		task.setVariable(name, value);
 	}
+
+	setOutput(name: string, value: string): void {
+		task.debug(`Output variable ${name} not set to "${value}" because Azure Pipelines does not support output variables.`);
+	}
 }
