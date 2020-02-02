@@ -1,5 +1,7 @@
 # cloudbuild-task-azp
 
+![This package depends on azure-pipelines-task-lib](https://img.shields.io/github/package-json/dependency-version/aarnott/cloudbuild-task/azure-pipelines-task-lib?filename=cloudbuild-task-azp%2Fpackage.json)
+
 This package implements the [cloudbuild-task-contracts](https://www.npmjs.com/package/cloudbuild-task-contracts) abstraction
 for Azure Pipelines, allowing a build task that was written against that abstraction to run as an Azure Pipelines task.
 

@@ -3,6 +3,9 @@
 	"version": "0.1.0-alpha",
 	"description": "A local node.js-only adapter for the cloudbuild-task-contracts.",
 	"main": "lib/index.js",
+	"engines": {
+		"node": ">= 6.0"
+	},
 	"scripts": {
 		"build": "tsc",
 		"watch": "tsc -watch",

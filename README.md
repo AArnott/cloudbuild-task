@@ -1,5 +1,8 @@
 # cloudbuild-task
 
+![These NPM packages are typed with TypeScript](https://img.shields.io/npm/types/cloudbuild-task-contracts)
+![MIT license](https://img.shields.io/npm/l/cloudbuild-task-contracts)
+
 [![GitHub Actions status](https://github.com/aarnott/cloudbuild-task/workflows/CI/badge.svg)](https://github.com/AArnott/cloudbuild-task/actions)
 
 This repo contains the source code for several NPM packages
