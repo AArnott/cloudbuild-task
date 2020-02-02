@@ -6,18 +6,24 @@ Param (
 
 
 Get-ChildItem "$PSScriptRoot\..\..\cloudbuild-task-*" -Directory | % {
-	Write-Host -ForegroundColor Blue "Building $($_.Name)"
+	Write-Host -ForegroundColor Blue "Setting version for package $($_.Name)"
 	Push-Location $_.FullName
+	try {
+		npm version $Version --allow-same-version
 
-	npm version $Version
-
-	if ($LASTEXITCODE -ne 0) {
-		exit $LASTEXITCODE
+		if ($LASTEXITCODE -ne 0) {
+			exit $LASTEXITCODE
+		}
 	}
-
-	Pop-Location
+ finally {
+		Pop-Location
+	}
 }
 
 Push-Location $PSScriptRoot
-yarn up @aarnott/cloudbuild-task-contracts
-Pop-Location
+try {
+	yarn up @aarnott/cloudbuild-task-contracts
+}
+finally {
+	Pop-Location
+}
