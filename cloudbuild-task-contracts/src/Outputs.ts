@@ -7,7 +7,7 @@ export interface Outputs {
 	setVariable(name: string, value: string): void;
 
 	/**
-	 * Sets an output variable that the workflow/pipeline can directly consume if they wire a symbol up to receive it.
+	 * Sets an output variable that the workflow/pipeline can directly consume if they refer to this particular task invocation and output name.
 	 * @param name The name of the output variable.
 	 * @param value The value of the output variable.
 	 */
