@@ -5,8 +5,6 @@ on:
     branches:
       - master
       - validate/*
-    tags:
-      - v*
   pull_request:
 
 jobs:
@@ -56,21 +54,3 @@ jobs:
         name: NPM packages
         path: out
       if: runner.os == 'Linux'
-    - name: Prepare to publish to npmjs.org
-      uses: actions/setup-node@v1
-      with:
-        registry-url: https://registry.npmjs.org
-      if: github.event_name == 'push' && github.ref == format('refs/tags/v{0}', steps.nbgv.outputs.SemVer2) && runner.os == 'Linux'
-    - name: Publish NPM packages to npmjs.org
-      run: |
-        Get-ChildItem *.tgz |% {
-          npm publish $_
-          if ($LASTEXITCODE -ne 0) {
-            exit $LASTEXITCODE
-          }
-        }
-      shell: pwsh
-      working-directory: out
-      if: github.event_name == 'push' && github.ref == format('refs/tags/v{0}', steps.nbgv.outputs.SemVer2) && runner.os == 'Linux'
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
