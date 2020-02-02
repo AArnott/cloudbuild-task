@@ -5,8 +5,4 @@ export class Outputs implements contracts.Outputs {
 	setVariable(name: string, value: string): void {
 		core.exportVariable(name, value);
 	}
-
-	setOutput(name: string, value: string): void {
-		core.setOutput(name, value);
-	}
 }
