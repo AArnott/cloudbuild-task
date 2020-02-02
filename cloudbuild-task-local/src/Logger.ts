@@ -1,4 +1,4 @@
-import * as contracts from '@aarnott/cloudbuild-task-contracts';
+import * as contracts from 'cloudbuild-task-contracts';
 
 export class Logger implements contracts.Logger {
 	setSecret(): void {

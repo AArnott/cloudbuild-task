@@ -4,76 +4,6 @@
 __metadata:
   version: 4
 
-"@aarnott/cloudbuild-task-azp@workspace:cloudbuild-task-azp":
-  version: 0.0.0-use.local
-  resolution: "@aarnott/cloudbuild-task-azp@workspace:cloudbuild-task-azp"
-  dependencies:
-    "@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
-    "@types/jest": ^24.9.0
-    "@types/node": ^13.1.8
-    azure-pipelines-task-lib: ^2.9.3
-    jest: ^24.0.0
-    jshint: ^2.11.0
-    ts-jest: ^24.3.0
-    tslint: ^6.0.0
-    typescript: ^3.7.5
-  languageName: unknown
-  linkType: soft
-
-"@aarnott/cloudbuild-task-contracts@workspace:cloudbuild-task-contracts":
-  version: 0.0.0-use.local
-  resolution: "@aarnott/cloudbuild-task-contracts@workspace:cloudbuild-task-contracts"
-  dependencies:
-    "@types/jest": ^24.9.1
-    "@types/node": ^13.1.8
-    jest: ^25.1.0
-    jshint: ^2.11.0
-    ts-jest: ^25.0.0
-    tslint: ^6.0.0
-    typescript: ^3.7.5
-  languageName: unknown
-  linkType: soft
-
-"@aarnott/cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions":
-  version: 0.0.0-use.local
-  resolution: "@aarnott/cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions"
-  dependencies:
-    "@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
-    "@actions/core": ^1.0.0
-    "@actions/exec": ^1.0.0
-    "@actions/github": ^1.0.0
-    "@actions/io": ^1.0.0
-    "@actions/tool-cache": ^1.0.0
-    "@octokit/webhooks": ^7.0.0
-    "@types/jest": ^24.9.0
-    "@types/node": ^13.1.8
-    jest: ^24.0.0
-    jshint: ^2.11.0
-    ts-jest: ^24.3.0
-    tslint: ^6.0.0
-    typescript: ^3.7.5
-  languageName: unknown
-  linkType: soft
-
-"@aarnott/cloudbuild-task-local@workspace:cloudbuild-task-local":
-  version: 0.0.0-use.local
-  resolution: "@aarnott/cloudbuild-task-local@workspace:cloudbuild-task-local"
-  dependencies:
-    "@aarnott/cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
-    "@types/jest": ^24.9.0
-    "@types/node": ^13.1.8
-    "@types/stream-buffers": ^3.0.3
-    child_process: ^1.0.2
-    jest: ^24.0.0
-    jshint: ^2.11.0
-    simple-git: ^1.130.0
-    stream-buffers: ^3.0.2
-    ts-jest: ^24.3.0
-    tslint: ^6.0.0
-    typescript: ^3.7.5
-  languageName: unknown
-  linkType: soft
-
 "@actions/core@npm:^1.0.0, @actions/core@npm:^1.2.0":
   version: 1.2.1
   resolution: "@actions/core@npm:1.2.1"
@@ -1644,6 +1574,76 @@ __metadata:
   checksum: 8ad0d73408226df4738c86b3d8eca317251befe396da017b72f6568f3eefc76ebd09a255cbbcd842c947e9eb44536f0fa4feaf1ab8816d545bce944536ba2faf
   languageName: node
   linkType: hard
+
+"cloudbuild-task-azp@workspace:cloudbuild-task-azp":
+  version: 0.0.0-use.local
+  resolution: "cloudbuild-task-azp@workspace:cloudbuild-task-azp"
+  dependencies:
+    "@types/jest": ^24.9.0
+    "@types/node": ^13.1.8
+    azure-pipelines-task-lib: ^2.9.3
+    cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
+    jest: ^24.0.0
+    jshint: ^2.11.0
+    ts-jest: ^24.3.0
+    tslint: ^6.0.0
+    typescript: ^3.7.5
+  languageName: unknown
+  linkType: soft
+
+"cloudbuild-task-contracts@workspace:cloudbuild-task-contracts":
+  version: 0.0.0-use.local
+  resolution: "cloudbuild-task-contracts@workspace:cloudbuild-task-contracts"
+  dependencies:
+    "@types/jest": ^24.9.1
+    "@types/node": ^13.1.8
+    jest: ^25.1.0
+    jshint: ^2.11.0
+    ts-jest: ^25.0.0
+    tslint: ^6.0.0
+    typescript: ^3.7.5
+  languageName: unknown
+  linkType: soft
+
+"cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions":
+  version: 0.0.0-use.local
+  resolution: "cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions"
+  dependencies:
+    "@actions/core": ^1.0.0
+    "@actions/exec": ^1.0.0
+    "@actions/github": ^1.0.0
+    "@actions/io": ^1.0.0
+    "@actions/tool-cache": ^1.0.0
+    "@octokit/webhooks": ^7.0.0
+    "@types/jest": ^24.9.0
+    "@types/node": ^13.1.8
+    cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
+    jest: ^24.0.0
+    jshint: ^2.11.0
+    ts-jest: ^24.3.0
+    tslint: ^6.0.0
+    typescript: ^3.7.5
+  languageName: unknown
+  linkType: soft
+
+"cloudbuild-task-local@workspace:cloudbuild-task-local":
+  version: 0.0.0-use.local
+  resolution: "cloudbuild-task-local@workspace:cloudbuild-task-local"
+  dependencies:
+    "@types/jest": ^24.9.0
+    "@types/node": ^13.1.8
+    "@types/stream-buffers": ^3.0.3
+    child_process: ^1.0.2
+    cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
+    jest: ^24.0.0
+    jshint: ^2.11.0
+    simple-git: ^1.130.0
+    stream-buffers: ^3.0.2
+    ts-jest: ^24.3.0
+    tslint: ^6.0.0
+    typescript: ^3.7.5
+  languageName: unknown
+  linkType: soft
 
 "cloudbuild-task@workspace:.":
   version: 0.0.0-use.local

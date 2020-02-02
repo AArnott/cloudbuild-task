@@ -1,5 +1,5 @@
-import * as contracts from '@aarnott/cloudbuild-task-contracts';
-import { Logger } from '@aarnott/cloudbuild-task-contracts';
+import * as contracts from 'cloudbuild-task-contracts';
+import { Logger } from 'cloudbuild-task-contracts';
 
 export class Outputs implements contracts.Outputs {
 	/** The variables that have been set. */

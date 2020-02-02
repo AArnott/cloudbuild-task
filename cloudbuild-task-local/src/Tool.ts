@@ -1,6 +1,6 @@
 import * as cp from 'child_process';
 import * as os from 'os';
-import * as contracts from '@aarnott/cloudbuild-task-contracts';
+import * as contracts from 'cloudbuild-task-contracts';
 import { TaskResult } from './TaskResult';
 import { Transform, Writable } from 'stream';
 

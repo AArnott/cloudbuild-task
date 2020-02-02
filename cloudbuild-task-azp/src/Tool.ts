@@ -1,5 +1,5 @@
 import * as task from 'azure-pipelines-task-lib/task';
-import * as contracts from '@aarnott/cloudbuild-task-contracts';
+import * as contracts from 'cloudbuild-task-contracts';
 
 export class Tool implements contracts.Tool {
 	spawn(commandLine: string, args?: string[] | string, options?: contracts.ToolOptions): Promise<number> {

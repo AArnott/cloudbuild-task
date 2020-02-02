@@ -13,10 +13,21 @@ and run in GitHub Actions, Azure Pipelines, or locally on a dev box.
 
 ## Installation
 
-The packages in this repo are published to the GitHub Package Registry.
-[Configuring npm for use with GitHub Packages](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages).
+This repo creates NPM packages.
 
-[See our packages, descriptions and installation instructions](https://github.com/AArnott/cloudbuild-task/packages).
+This package defines the abstraction, and is what the core of your task should depend on:
+
+[![cloudbuild-task-contracts](https://img.shields.io/npm/v/cloudbuild-task-contracts?label=cloudbuild-task-contracts)](https://www.npmjs.com/package/cloudbuild-task-contracts)
+
+These other packages are what your CI-specific task front-ends should depend on:
+
+| CI | Package |
+|--|--|
+Azure Pipelines | [![cloudbuild-task-azp](https://img.shields.io/npm/v/cloudbuild-task-azp?label=cloudbuild-task-azp)](https://www.npmjs.com/package/cloudbuild-task-azp)
+GitHub Actions | [![cloudbuild-task-github-actions](https://img.shields.io/npm/v/cloudbuild-task-github-actions?label=cloudbuild-task-github-actions)](https://www.npmjs.com/package/cloudbuild-task-github-actions)
+Local runner | [![cloudbuild-task-local](https://img.shields.io/npm/v/cloudbuild-task-local?label=cloudbuild-task-local)](https://www.npmjs.com/package/cloudbuild-task-local)
+
+Adapters for other CI systems may exist that are built elsewhere. If you create or know of one, please let us know so we can help direct people to it.
 
 ## Consuming
 
@@ -29,7 +40,7 @@ These packages include TypeScript typings for your convenience.
 ### Your task's core package
 
 Design your task as a 'core' NPM package that contains most of your build logic.
-This should depend on the `@aarnott/cloudbuild-task-contracts` NPM package.
+This should depend on the `cloudbuild-task-contracts` NPM package.
 It should *not* depend on any cloud build specific package.
 
 This core package should export a class or method that accepts a `CloudTask`.
@@ -47,7 +58,7 @@ So for example, this core task package would look up a variable
 and log an error including its value and fail the task run:
 
 ```ts
-import { CloudTask } from '@aarnott/cloudbuild-task-contracts';
+import { CloudTask } from 'cloudbuild-task-contracts';
 
 export function run(cloudTask: CloudTask) {
   const name = cloudTask.inputs.getInput('name');
@@ -68,7 +79,7 @@ that is specific to this cloud build system.
 For an Azure Pipelines task, you might code it up like this:
 
 ```ts
-import { factory } from '@aarnott/cloudbuild-task-azp';
+import { factory } from 'cloudbuild-task-azp';
 import { run } from './MyTask';
 
 run(factory);
@@ -78,7 +89,7 @@ While for a GitHub Actions task it is nearly identical.
 The only change is the package you get the factory from:
 
 ```ts
-import { factory } from '@aarnott/cloudbuild-task-github-actions';
+import { factory } from 'cloudbuild-task-github-actions';
 import { run } from './MyTask';
 
 run(factory);
