@@ -19,11 +19,3 @@ Get-ChildItem "$PSScriptRoot\..\..\cloudbuild-task-*" -Directory | % {
 		Pop-Location
 	}
 }
-
-Push-Location $PSScriptRoot
-try {
-	yarn up @aarnott/cloudbuild-task-contracts
-}
-finally {
-	Pop-Location
-}

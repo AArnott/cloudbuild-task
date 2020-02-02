@@ -1,5 +1,5 @@
 {
-	"name": "@aarnott/cloudbuild-task-contracts",
+	"name": "cloudbuild-task-contracts",
 	"version": "0.1.0-alpha",
 	"description": "Abstractions that most/all cloud build services can fulfill in order to allow the development of tasks for submission to the various cloud build marketplaces while maintaining primarily just one codebase.",
 	"main": "lib/index.js",

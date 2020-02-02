@@ -1,4 +1,4 @@
-import * as contracts from '@aarnott/cloudbuild-task-contracts';
+import * as contracts from 'cloudbuild-task-contracts';
 import { exec } from '@actions/exec';
 import * as core from '@actions/core';
 

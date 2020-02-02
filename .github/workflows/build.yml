@@ -54,17 +54,3 @@ jobs:
         name: NPM packages
         path: out
       if: runner.os == 'Linux'
-    - name: Publish NPM packages to GitHub Registry
-      run: |
-        Get-ChildItem *.tgz |% {
-          npm publish $_
-          if ($LASTEXITCODE -ne 0) {
-            exit $LASTEXITCODE
-          }
-        }
-      shell: pwsh
-      working-directory: out
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master' && runner.os == 'Linux'
-      continue-on-error: true
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

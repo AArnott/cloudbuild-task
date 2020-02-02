@@ -1,4 +1,4 @@
-import * as contracts from '@aarnott/cloudbuild-task-contracts';
+import * as contracts from 'cloudbuild-task-contracts';
 
 export class TaskResult implements contracts.TaskResult {
 	/** The message passed to [[setFailed]], if ever. */
