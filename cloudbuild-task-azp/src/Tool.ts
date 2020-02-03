@@ -10,7 +10,7 @@ export class Tool implements contracts.Tool {
 			args = undefined;
 		}
 
-		const commandLineAsArgs = contracts.Utilities.parseArguments(commandLine);
+		const commandLineAsArgs = contracts.Tool.parseArguments(commandLine);
 		if (commandLineAsArgs.length === 0) {
 			throw new Error(`Parameter 'commandLine' cannot be null or empty.`)
 		}
