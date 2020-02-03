@@ -40,7 +40,8 @@ jobs:
       run: ./build_all.ps1
       shell: pwsh
     - name: Test
-      run: yarn test
+      run: ./test_all.ps1
+      shell: pwsh
 
     - name: Stamping NPM versions
       run: .github/workflows/set_version.ps1 -Version ${{ steps.nbgv.outputs.NpmPackageVersion }}
