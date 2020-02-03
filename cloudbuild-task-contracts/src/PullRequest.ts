@@ -12,8 +12,8 @@ export interface PullRequestTarget {
 	readonly sha?: string;
 }
 
-export interface PullRequest {
-	readonly id: number;
-	readonly sourceBranch: PullRequestSource;
-	readonly targetBranch: PullRequestTarget;
+export abstract class PullRequest {
+	abstract readonly id: number;
+	abstract readonly sourceBranch: PullRequestSource;
+	abstract readonly targetBranch: PullRequestTarget;
 }

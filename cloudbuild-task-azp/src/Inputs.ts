@@ -1,7 +1,7 @@
 import * as contracts from 'cloudbuild-task-contracts';
 import * as task from 'azure-pipelines-task-lib/task';
 
-export class Inputs implements contracts.Inputs {
+export class Inputs extends contracts.Inputs {
 	getInput(name: string, required?: boolean): string | undefined {
 		return task.getInput(name, required);
 	}

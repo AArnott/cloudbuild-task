@@ -1,9 +1,9 @@
 /** Provides message logging functionality. */
-export interface Logger {
-	error(message: string): void;
-	warning(message: string): void;
-	debug(message: string): void;
+export abstract class Logger {
+	abstract error(message: string): void;
+	abstract warning(message: string): void;
+	abstract debug(message: string): void;
 
 	/** Masks a given value from the logs. */
-	setSecret(secret: string): void;
+	abstract setSecret(secret: string): void;
 }
