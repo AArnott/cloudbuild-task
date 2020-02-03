@@ -1,15 +1,15 @@
 export interface PullRequestSource {
 	/** The branch name. Includes the `refs/heads/` prefix. */
-	ref: string;
+	readonly ref: string;
 	/** The full git commit ID */
-	sha?: string;
+	readonly sha?: string;
 }
 
 export interface PullRequestTarget {
 	/** The branch name. Includes the `refs/heads/` prefix. */
-	ref: string;
+	readonly ref: string;
 	/** The full git commit ID */
-	sha?: string;
+	readonly sha?: string;
 }
 
 export interface PullRequest {
