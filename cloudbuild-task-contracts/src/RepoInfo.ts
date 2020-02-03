@@ -1,11 +1,11 @@
 /** Describes the branch, tag or commit being built. */
 export interface RepoInfo {
 	/** The full path to the root of the cloned repo. */
-	path: string;
+	readonly path: string;
 	/** The ref that was checked out. Includes the `refs/heads/` or `refs/tags/` prefix. */
-	ref?: string;
+	readonly ref?: string;
 	/** The full git commit ID that was checked out. */
-	sha: string;
+	readonly sha: string;
 	/** The git remote URL */
-	uri?: string;
+	readonly uri?: string;
 }
