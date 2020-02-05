@@ -3,6 +3,8 @@ import * as core from '@actions/core';
 
 export class TaskResult implements contracts.TaskResult {
 	setFailed(message: string): void {
-		core.setFailed(message);
+		// Just in case folks accidentally send error objects in (which are typically typed as `any`),
+		// go ahead and render it as a string since GitHub Actions fails if non-strings are passed in.
+		core.setFailed(message.toString());
 	}
 }
