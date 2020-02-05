@@ -1,5 +1,5 @@
 import * as contracts from "cloudbuild-task-contracts";
-import * as os from 'os';
+import * as tmp from 'tmp-promise';
 import { Tool } from "./Tool";
 import { Logger } from "./Logger";
 import { Inputs } from "./Inputs";
@@ -7,17 +7,30 @@ import { Outputs } from "./Outputs";
 import { TaskResult } from "./TaskResult";
 const simpleGit = require('simple-git/promise')();
 
+tmp.setGracefulCleanup();
+
 export class LocalFactory implements contracts.CloudTask {
 	readonly log: contracts.Logger = new Logger();
 	readonly inputs: contracts.Inputs;
 	readonly outputs: contracts.Outputs = new Outputs(this.log);
 	readonly result = new TaskResult();
 	readonly tool = new Tool(this.result);
-	readonly temp: string;
+	get temp() {
+		if (typeof this.tempDir === 'string') {
+			return this.tempDir;
+		} else {
+			return this.tempDir.path;
+		}
+	}
 
-	constructor(public readonly repo: contracts.RepoInfo, inputVariables?: { [key: string]: string | boolean }, temp?: string) {
+	constructor(public readonly repo: contracts.RepoInfo, readonly tempDir: string | tmp.DirectoryResult, inputVariables?: { [key: string]: string | boolean }) {
 		this.inputs = new Inputs(inputVariables);
-		this.temp = temp || os.tmpdir();
+	}
+
+	async cleanup(): Promise<void> {
+		if (typeof this.tempDir !== 'string') {
+			await this.tempDir.cleanup();
+		}
 	}
 
 	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }, tempDirectory?: string): Promise<LocalFactory> {
@@ -44,6 +57,12 @@ export class LocalFactory implements contracts.CloudTask {
 			ref: ref,
 			uri: remoteUri,
 		};
-		return new LocalFactory(repo, inputVariables, tempDirectory);
+
+		let tmpArg: string | tmp.DirectoryResult | undefined = tempDirectory;
+		if (!tmpArg) {
+			tmpArg = await tmp.dir({ unsafeCleanup: true });
+		}
+
+		return new LocalFactory(repo, tmpArg, inputVariables);
 	}
 }
