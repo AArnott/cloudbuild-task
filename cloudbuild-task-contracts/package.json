@@ -4,7 +4,7 @@
 	"description": "Abstractions that most/all cloud build services can fulfill in order to allow the development of tasks for submission to the various cloud build marketplaces while maintaining primarily just one codebase.",
 	"main": "lib/index.js",
 	"engines": {
-		"node": ">= 6.0"
+		"node": ">= 10.0"
 	},
 	"scripts": {
 		"build": "tsc",

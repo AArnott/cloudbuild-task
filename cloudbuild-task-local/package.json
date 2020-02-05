@@ -4,7 +4,7 @@
 	"description": "A local node.js-only adapter for the cloudbuild-task-contracts.",
 	"main": "lib/index.js",
 	"engines": {
-		"node": ">= 6.0"
+		"node": ">= 10.0"
 	},
 	"scripts": {
 		"build": "tsc",

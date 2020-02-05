@@ -1,5 +1,9 @@
 # cloudbuild-task-contracts
 
+![These NPM packages are typed with TypeScript](https://img.shields.io/npm/types/cloudbuild-task-contracts)
+![MIT license](https://img.shields.io/npm/l/cloudbuild-task-contracts)
+![Required Node](https://img.shields.io/node/v/cloudbuild-task-contracts)
+
 This package defines a common abstraction around potentially any cloud build (PR/CI build system)
 that defines special 'tasks' that may take inputs and perform built-in operations.
 
