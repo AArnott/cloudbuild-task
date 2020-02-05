@@ -3,7 +3,8 @@ import * as core from '@actions/core';
 
 export class Inputs implements contracts.Inputs {
 	getInput(name: string, required?: boolean): string | undefined {
-		return core.getInput(name, { required: required });
+		const result = core.getInput(name, { required: required });
+		return result === '' ? undefined : result;
 	}
 
 	getBoolInput(name: string, required?: boolean): boolean | undefined {
