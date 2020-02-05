@@ -16,6 +16,11 @@ beforeEach(async () => {
 	factoryVars.result.silent = true;
 });
 
+afterEach(async () => {
+	await factoryNoVars.cleanup();
+	await factoryVars.cleanup();
+});
+
 describe('overall', () => {
 	test('factory members are not null', () => {
 		expect(factoryNoVars.log).toBeDefined();

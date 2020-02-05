@@ -1639,6 +1639,7 @@ __metadata:
     jshint: ^2.11.0
     simple-git: ^1.130.0
     stream-buffers: ^3.0.2
+    tmp-promise: ^2.0.2
     ts-jest: ^24.3.0
     tslint: ^6.0.0
     typescript: ^3.7.5
@@ -6312,7 +6313,16 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"tmp@npm:^0.1.0":
+"tmp-promise@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "tmp-promise@npm:2.0.2"
+  dependencies:
+    tmp: 0.1.0
+  checksum: 44205f4b1acc32e1f77e8f3a0c38efb423435a3605b7430e3924f15895850ed663c4121d4872b02ceff9a2f38935aa71e6eea900484187a3e24222f8c45fdca1
+  languageName: node
+  linkType: hard
+
+"tmp@npm:0.1.0, tmp@npm:^0.1.0":
   version: 0.1.0
   resolution: "tmp@npm:0.1.0"
   dependencies:
@@ -6438,8 +6448,8 @@ resolve@1.1.7:
   linkType: hard
 
 "ts-jest@npm:^25.0.0":
-  version: 25.0.0
-  resolution: "ts-jest@npm:25.0.0"
+  version: 25.2.0
+  resolution: "ts-jest@npm:25.2.0"
   dependencies:
     bs-logger: 0.x
     buffer-from: 1.x
@@ -6455,7 +6465,7 @@ resolve@1.1.7:
     jest: ">=25 <26"
   bin:
     ts-jest: cli.js
-  checksum: 550f06e5e3be9af34577abaf7facbda7598d0c1c73be535775b02eb64a6098e10956f636e6af9a97acb6fad73e23c98a8e479a5ab5bbaf512ae06e15832c5a86
+  checksum: d7348e4cc837027557fd27a1c19f7dd781b47b60058aa75539b2478b733405f6c50f7e1a974962f0071de9bce1cfd499594aeda2df63dfaa78b8f2212e37c437
   languageName: node
   linkType: hard
 
