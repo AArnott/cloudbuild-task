@@ -25,11 +25,11 @@ class AzurePipelinesFactory implements contracts.CloudTask {
 
 	constructor() {
 		if (task.getVariable('Build.Reason') === 'PullRequest') {
-			const pullRequestId = task.getVariable('System.PullRequest.PullRequestId');
 			const pullRequestNumber = task.getVariable('System.PullRequest.PullRequestNumber');
+			const pullRequestId = task.getVariable('System.PullRequest.PullRequestId');
 			const id: number | undefined =
-				pullRequestId ? Number.parseInt(pullRequestId, 10) :
-					pullRequestNumber ? Number.parseInt(pullRequestNumber, 10) :
+				pullRequestNumber ? Number.parseInt(pullRequestNumber, 10) :
+					pullRequestId ? Number.parseInt(pullRequestId, 10) :
 						undefined;
 
 			if (id === undefined) {
