@@ -29,7 +29,7 @@ To configure *your* VS Code IDE's language service to work in this repo, complet
 
 1. Open any .ts file in this repo.
 1. Press Ctrl+Shift+P
-1. Choose "Select TypeScript Version"
+1. Choose "Typescript: Select TypeScript Version"
 1. Pick "Use Workspace Version"
 
 Another caveat to not using `node_modules` is that F12 Go to Definition on imported types cannot jump to imported modules.
