@@ -1,4 +1,5 @@
 {
-	"typescript.tsdk": ".vscode/pnpify/typescript/lib",
-	"jest.pathToJest": "yarn jest"
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "jest.pathToJest": "yarn jest",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
