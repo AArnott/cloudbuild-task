@@ -13,7 +13,7 @@ class GitHubFactory implements contracts.CloudTask {
 	readonly inputs: contracts.Inputs = new Inputs();
 	readonly outputs: contracts.Outputs = new Outputs();
 	readonly repo = {
-		path: process.cwd(),
+		path: process.env.GITHUB_WORKSPACE!, // github.context.workspace, // https://github.com/actions/toolkit/issues/555
 		ref: github.context.ref,
 		sha: github.context.sha,
 		uri: `https://github.com/${github.context.repo.owner}/${github.context.repo.repo}`,
