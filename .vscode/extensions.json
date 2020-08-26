@@ -6,7 +6,8 @@
     "orta.vscode-jest",
     "pflannery.vscode-versionlens",
     "ms-vscode.vscode-typescript-tslint-plugin",
-    "arcanis.vscode-zipfs"
+    "arcanis.vscode-zipfs",
+    "ms-vscode.powershell"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

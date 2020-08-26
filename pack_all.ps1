@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 if (!(Test-Path "$PSScriptRoot\out")) {
 	New-Item -ItemType Directory -Path "$PSScriptRoot\out" | Out-Null
 }

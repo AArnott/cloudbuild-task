@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 $buildOrder =
 	'cloudbuild-task-contracts',
 	'cloudbuild-task-azp',
