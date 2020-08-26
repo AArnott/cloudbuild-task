@@ -988,7 +988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/request-error@npm:^2.0.0":
+"@octokit/request-error@npm:^2.0.0, @octokit/request-error@npm:^2.0.2":
   version: 2.0.2
   resolution: "@octokit/request-error@npm:2.0.2"
   dependencies:
@@ -1024,13 +1024,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/webhooks@npm:^7.8.2":
-  version: 7.8.2
-  resolution: "@octokit/webhooks@npm:7.8.2"
+"@octokit/webhooks@npm:^7.11.2":
+  version: 7.11.2
+  resolution: "@octokit/webhooks@npm:7.11.2"
   dependencies:
+    "@octokit/request-error": ^2.0.2
     "@pika/plugin-ts-standard-pkg": ^0.9.2
+    aggregate-error: ^3.1.0
     debug: ^4.0.0
-  checksum: b3baae0b04c2bee9996c587f77ee532be5535a00aa1744f09740d95157db9cf6a6344757456f75189ddad0b0532813b55ff3e553781ed75d5937c45a98009248
+  checksum: 53038fb24930fb6432805b1de1f0e1d7d2254d1bb16bac55df5cb89dbe4a6eb12731d6d10edc4a0720cefab26f846688e18a6a3197ba3ad869dc46ec33bb3a1e
   languageName: node
   linkType: hard
 
@@ -1487,6 +1489,16 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: a25b12d9e803df49593e983f05abd8084be883df23f78a3ceb49bfb9c453fdc43d51b3ce268b6acd7694c34d9cde1707acb1cdcbc5303bde47bee43ffc131491
+  languageName: node
+  linkType: hard
+
+"aggregate-error@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "aggregate-error@npm:3.1.0"
+  dependencies:
+    clean-stack: ^2.0.0
+    indent-string: ^4.0.0
+  checksum: 704d2001a303c185e9b836d211f7eef2f4557195a11c3271143b4dcda5f6f263abe746d9b8a06b5871d07870686c7db9c0b2c38e2d3cbc593784eaaee8a29043
   languageName: node
   linkType: hard
 
@@ -2063,6 +2075,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clean-stack@npm:^2.0.0":
+  version: 2.2.0
+  resolution: "clean-stack@npm:2.2.0"
+  checksum: e291ce2b8c8c59e6449ac9a7a726090264bea6696e5343b21385e16d279c808ca09d73a1abea8fd23a9b7699e6ef5ce582df203511f71c8c27666bf3b2e300c5
+  languageName: node
+  linkType: hard
+
 "cli@npm:~1.0.0":
   version: 1.0.1
   resolution: "cli@npm:1.0.1"
@@ -2139,7 +2158,7 @@ __metadata:
     "@actions/github": ^4.0.0
     "@actions/io": ^1.0.2
     "@actions/tool-cache": ^1.6.0
-    "@octokit/webhooks": ^7.8.2
+    "@octokit/webhooks": ^7.11.2
     "@types/jest": ^26.0.8
     "@types/node": ^14.0.27
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
@@ -2162,7 +2181,7 @@ __metadata:
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.2.2
     jshint: ^2.12.0
-    simple-git: ^2.17.0
+    simple-git: ^2.20.1
     stream-buffers: ^3.0.2
     tmp-promise: ^3.0.2
     ts-jest: ^26.1.4
@@ -3459,6 +3478,13 @@ fsevents@^2.1.2:
   version: 0.1.4
   resolution: "imurmurhash@npm:0.1.4"
   checksum: 34d414d789286f6ef4d2b954c76c7df40dd7cabffef9b9959c8bd148677e98151f4fa5344aae2e3ad2b62308555ccbba3022e535a3e24288c9babb1308e35532
+  languageName: node
+  linkType: hard
+
+"indent-string@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "indent-string@npm:4.0.0"
+  checksum: 3e54996c6e15ca00a7a4403be705bce4fb3bb4ac637da2e1473006e42a651863f53bfb8c3438c1b3aac77817768ac0cde0e7b7a81a6cf24a1286227a06510dbf
   languageName: node
   linkType: hard
 
@@ -5918,14 +5944,14 @@ resolve@^1.17.0:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^2.17.0":
-  version: 2.17.0
-  resolution: "simple-git@npm:2.17.0"
+"simple-git@npm:^2.20.1":
+  version: 2.20.1
+  resolution: "simple-git@npm:2.20.1"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
     debug: ^4.1.1
-  checksum: 721e3aa70dd994f00f59294dabfdbf28bec0a7b94acec6390a487c1bc90b029e04ba51c562fff213f472f8f459aadfab82ee4c47e2799edf76350e52055dfb81
+  checksum: 9a17158372ceb111db7c9695df5dba496bcf3ddc49640b9e75e139f7917bd66c1d27521c098108f82c4a5e943b22e5b19982e5fe181e4c0af5b7e15fef5e68f4
   languageName: node
   linkType: hard
 
