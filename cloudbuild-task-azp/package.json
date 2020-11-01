@@ -23,7 +23,7 @@
 	"author": "Andrew Arnott <andrewarnott@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"azure-pipelines-task-lib": "^2.11.2",
+		"azure-pipelines-task-lib": "^2.11.3",
 		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
 	},
 	"devDependencies": {
