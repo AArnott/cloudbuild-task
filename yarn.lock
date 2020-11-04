@@ -5,10 +5,17 @@ __metadata:
   version: 4
   cacheKey: 5
 
-"@actions/core@npm:^1.2.3, @actions/core@npm:^1.2.4":
+"@actions/core@npm:^1.2.3":
   version: 1.2.5
   resolution: "@actions/core@npm:1.2.5"
   checksum: 6c4eee15974bf4c65d0b7305cc6b49d9cb6f79111ea636b08d6b5fd76e39988b880c1030313f7f57790d741a322f2ddc41b9b7037d145d383a1aba93bb418dc6
+  languageName: node
+  linkType: hard
+
+"@actions/core@npm:^1.2.6":
+  version: 1.2.6
+  resolution: "@actions/core@npm:1.2.6"
+  checksum: 984c7d5ae95c02f62f69549a9d5cfbc0db0b035f519775301b397c167791ceee269fb504cb622da541d1fa305ee4ad3fc30d017c6407045aa4eb6809eee4c549
   languageName: node
   linkType: hard
 
@@ -868,15 +875,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/webhooks@npm:^7.11.2":
-  version: 7.11.2
-  resolution: "@octokit/webhooks@npm:7.11.2"
+"@octokit/webhooks@npm:^7.15.1":
+  version: 7.15.1
+  resolution: "@octokit/webhooks@npm:7.15.1"
   dependencies:
     "@octokit/request-error": ^2.0.2
     "@pika/plugin-ts-standard-pkg": ^0.9.2
     aggregate-error: ^3.1.0
     debug: ^4.0.0
-  checksum: 53038fb24930fb6432805b1de1f0e1d7d2254d1bb16bac55df5cb89dbe4a6eb12731d6d10edc4a0720cefab26f846688e18a6a3197ba3ad869dc46ec33bb3a1e
+  checksum: 7d93aec54f3ebda4541207d366e9dc562d484e47e561069302a1e9f7cfb8e7ae259ce4d3e13a01a15e4546b26a758562d790f8a9ddd37d8257ac473724e457cd
   languageName: node
   linkType: hard
 
@@ -1550,9 +1557,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-pipelines-task-lib@npm:^2.10.0":
-  version: 2.10.0
-  resolution: "azure-pipelines-task-lib@npm:2.10.0"
+"azure-pipelines-task-lib@npm:^2.11.3":
+  version: 2.11.3
+  resolution: "azure-pipelines-task-lib@npm:2.11.3"
   dependencies:
     minimatch: 3.0.4
     mockery: ^1.7.0
@@ -1561,7 +1568,7 @@ __metadata:
     shelljs: ^0.3.0
     sync-request: 3.0.1
     uuid: ^3.0.1
-  checksum: a338758a6c2c418f48f99b3ebcb77a787e94a447fe3fd4bb5ffffc657d411741b32d340fb1fe0864cab8d13f073b4faa226043b9c56dae68563a9c3296109adb
+  checksum: 6719d077638d1fe2a791a5323bd67061d59f40cd620967d71bf795b50d0fd999021a753448dc2d6ccf934bf6d3cbb40fba3ace0eb961d562ae70895d179ec52f
   languageName: node
   linkType: hard
 
@@ -1966,7 +1973,7 @@ __metadata:
   dependencies:
     "@types/jest": ^26.0.8
     "@types/node": ^14.0.27
-    azure-pipelines-task-lib: ^2.10.0
+    azure-pipelines-task-lib: ^2.11.3
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.4.2
     jshint: ^2.12.0
@@ -1994,12 +2001,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions"
   dependencies:
-    "@actions/core": ^1.2.4
+    "@actions/core": ^1.2.6
     "@actions/exec": ^1.0.4
     "@actions/github": ^4.0.0
     "@actions/io": ^1.0.2
     "@actions/tool-cache": ^1.6.0
-    "@octokit/webhooks": ^7.11.2
+    "@octokit/webhooks": ^7.15.1
     "@types/jest": ^26.0.8
     "@types/node": ^14.0.27
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
@@ -2022,7 +2029,7 @@ __metadata:
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.4.2
     jshint: ^2.12.0
-    simple-git: ^2.20.1
+    simple-git: ^2.21.0
     stream-buffers: ^3.0.2
     tmp-promise: ^3.0.2
     ts-jest: ^26.3.0
@@ -5683,14 +5690,14 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^2.20.1":
-  version: 2.20.1
-  resolution: "simple-git@npm:2.20.1"
+"simple-git@npm:^2.21.0":
+  version: 2.21.0
+  resolution: "simple-git@npm:2.21.0"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
     debug: ^4.1.1
-  checksum: 9a17158372ceb111db7c9695df5dba496bcf3ddc49640b9e75e139f7917bd66c1d27521c098108f82c4a5e943b22e5b19982e5fe181e4c0af5b7e15fef5e68f4
+  checksum: cde3ebdf9e716649af1afea8686060942ff725d53d0093cbf87ad32555090728026e45a72881a9428c850f1bdb5bed197fabc74b28c6d74c50b616a2c395a39f
   languageName: node
   linkType: hard
 
