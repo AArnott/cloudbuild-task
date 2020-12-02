@@ -28,7 +28,7 @@ jobs:
         path: .yarn/cache
         key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
         restore-keys: ${{ runner.os }}-yarn-
-    - uses: aarnott/nbgv@v0.3
+    - uses: dotnet/nbgv@v0.4
       id: nbgv
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
