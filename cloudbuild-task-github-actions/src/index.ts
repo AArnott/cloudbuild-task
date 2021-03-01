@@ -5,7 +5,6 @@ import { Inputs } from './Inputs';
 import { Outputs } from './Outputs';
 import { TaskResult } from './TaskResult';
 import * as github from '@actions/github';
-import { EventPayloads } from '@octokit/webhooks'
 
 class GitHubFactory implements contracts.CloudTask {
 	readonly tool: contracts.Tool = new Tool();
@@ -23,12 +22,11 @@ class GitHubFactory implements contracts.CloudTask {
 	readonly pullRequest?: contracts.PullRequest;
 
 	constructor() {
-		if (github.context.eventName === 'pull_request') {
-			const pullRequestPayload = github.context.payload as EventPayloads.WebhookPayloadPullRequest;
+		if (github.context.payload.pull_request) {
 			this.pullRequest = {
-				id: pullRequestPayload.number,
-				targetBranch: pullRequestPayload.pull_request.base,
-				sourceBranch: pullRequestPayload.pull_request.head,
+				id: github.context.payload.number,
+				targetBranch: github.context.payload.pull_request.base,
+				sourceBranch: github.context.payload.pull_request.head,
 			};
 		}
 	}
