@@ -35,7 +35,7 @@ jobs:
       with:
         node-version: 14.x
         registry-url: https://npm.pkg.github.com
-    - run: yarn
+    - run: yarn --immutable
     - name: Build
       run: ./build_all.ps1
       shell: pwsh
