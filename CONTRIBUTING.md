@@ -29,11 +29,13 @@ To configure *your* VS Code IDE's language service to work in this repo, complet
 
 1. Open any .ts file in this repo.
 1. Press Ctrl+Shift+P
-1. Choose "Typescript: Select TypeScript Version"
+1. Choose "Typescript: Select TypeScript Version". If this command does not show up, try reloading your VS Code window via the "Developer: Reload Window" command.
 1. Pick "Use Workspace Version"
 
 Another caveat to not using `node_modules` is that F12 Go to Definition on imported types cannot jump to imported modules.
 VS Code has [fixing this on their backlog](https://github.com/microsoft/vscode/issues/75559). Please vote it up.
+
+You may need to occasionally run `yarn dlx @yarnpkg/pnpify --sdk vscode` after updating yarn or the typescript version to keep everything in sync.
 
 ## Build
 
