@@ -25,7 +25,7 @@
 	"dependencies": {
 		"child_process": "^1.0.2",
 		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts",
-		"simple-git": "^2.35.2",
+		"simple-git": "^2.42.0",
 		"tmp-promise": "^3.0.2"
 	},
 	"devDependencies": {
