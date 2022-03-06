@@ -1819,18 +1819,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-pipelines-task-lib@npm:^3.1.10":
-  version: 3.1.10
-  resolution: "azure-pipelines-task-lib@npm:3.1.10"
+"azure-pipelines-task-lib@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "azure-pipelines-task-lib@npm:3.2.0"
   dependencies:
     minimatch: 3.0.4
     mockery: ^1.7.0
     q: ^1.5.1
     semver: ^5.1.0
-    shelljs: ^0.8.4
+    shelljs: ^0.8.5
     sync-request: 6.1.0
     uuid: ^3.0.1
-  checksum: 6d37e93ad205beb581ecc0df3a0bf696afc6cf57070cf413899360d1a4fa849b55c771eba569f4f0cec5dc07f978a324dac2d68f3067850d85abf48e3058bd0b
+  checksum: 942d6c933104d0fd0c85fc245ca1773d3bd085e11e16727ee110deb5fc8dd80f7ae4375c9b996a70092fe65db97a629e819748fae4b56f4bd163f9ae58f5892b
   languageName: node
   linkType: hard
 
@@ -2337,7 +2337,7 @@ __metadata:
   dependencies:
     "@types/jest": ^26.0.20
     "@types/node": ^17.0.21
-    azure-pipelines-task-lib: ^3.1.10
+    azure-pipelines-task-lib: ^3.2.0
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.6.3
     jshint: ^2.12.0
@@ -6645,7 +6645,7 @@ resolve@^1.18.1:
   languageName: node
   linkType: hard
 
-"shelljs@npm:^0.8.4":
+"shelljs@npm:^0.8.5":
   version: 0.8.5
   resolution: "shelljs@npm:0.8.5"
   dependencies:
