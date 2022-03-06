@@ -26,7 +26,7 @@
 		"child_process": "^1.0.2",
 		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts",
 		"simple-git": "^3.2.6",
-		"tmp-promise": "^3.0.2"
+		"tmp-promise": "^3.0.3"
 	},
 	"devDependencies": {
 		"@types/jest": "^26.0.20",
