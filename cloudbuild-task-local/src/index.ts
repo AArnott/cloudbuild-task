@@ -5,7 +5,7 @@ import { Logger } from "./Logger";
 import { Inputs } from "./Inputs";
 import { Outputs } from "./Outputs";
 import { TaskResult } from "./TaskResult";
-const simpleGit = require('simple-git/promise')();
+const simpleGit = require('simple-git')();
 
 tmp.setGracefulCleanup();
 
@@ -35,7 +35,6 @@ export class LocalFactory implements contracts.CloudTask {
 
 	static async CreateAsync(inputVariables?: { [key: string]: string | boolean }, tempDirectory?: string): Promise<LocalFactory> {
 		let ref: string | undefined;
-		simpleGit.silent(true); // don't fail tests or tasks when stderr is written and/or exit code indicates failure.
 		try {
 			ref = await simpleGit.raw(['symbolic-ref', 'HEAD']);
 		}
