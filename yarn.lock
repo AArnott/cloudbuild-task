@@ -12,6 +12,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@actions/core@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@actions/core@npm:1.6.0"
+  dependencies:
+    "@actions/http-client": ^1.0.11
+  checksum: 71533cc514e4a158cea7c855610a44376814cc1b897f600aaf97636fc1bf49956bd4f7ef8f1cd04beefe8baa5d001aea40aadafbcbc6b36a62840bc25082e4c4
+  languageName: node
+  linkType: hard
+
 "@actions/exec@npm:^1.0.0, @actions/exec@npm:^1.0.4":
   version: 1.0.4
   resolution: "@actions/exec@npm:1.0.4"
@@ -33,6 +42,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@actions/http-client@npm:^1.0.11":
+  version: 1.0.11
+  resolution: "@actions/http-client@npm:1.0.11"
+  dependencies:
+    tunnel: 0.0.6
+  checksum: ccd0ae6ce99662e31daf1f5cb6b5130cc10ac9a3d4f2de74c54031cf13cd191dbbf0719e60e74f724f073f27af4cb9f393218d92f7f70c0b6e23bb1962c386e3
+  languageName: node
+  linkType: hard
+
 "@actions/http-client@npm:^1.0.8":
   version: 1.0.8
   resolution: "@actions/http-client@npm:1.0.8"
@@ -42,10 +60,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/io@npm:^1.0.1, @actions/io@npm:^1.0.2":
+"@actions/io@npm:^1.0.1":
   version: 1.0.2
   resolution: "@actions/io@npm:1.0.2"
   checksum: ccf358b298c115867061985a2ff1169f5565cde5d00af49ede272a0271001cb16165269f59742c720eb07a2d6f8faf05ec078895e38286a9dbabb40a518a776f
+  languageName: node
+  linkType: hard
+
+"@actions/io@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@actions/io@npm:1.1.1"
+  checksum: eb23d40a50f93842fbdbbd9f82ed2bfcb0558c6a253d9d44cfb0a09d235deb8c2caf2e97f79359abeff9ed45239f108a9e329f5a71dfd01ddfb88d15ab057ad7
   languageName: node
   linkType: hard
 
@@ -1036,22 +1061,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/webhooks-definitions@npm:3.61.0":
-  version: 3.61.0
-  resolution: "@octokit/webhooks-definitions@npm:3.61.0"
-  checksum: 268f9d875a8b311ad7a351bb099e7fc7e09e263c6202d9fdb640df5f8c5a9a20b52a1abf3b495cc792dfb1c97babdfdc86d9a0a50a93b88c7c1efddf8880766a
+"@octokit/webhooks-methods@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@octokit/webhooks-methods@npm:2.0.0"
+  checksum: b99e19cb0734e3e0b8354c6c34327f647f189678453771b415ebd6049978444c7f14ad8a6fa5b4885cf34626fb6848d57287bd2b40dce6f3923926cf0f1e49ad
   languageName: node
   linkType: hard
 
-"@octokit/webhooks@npm:^8.4.1":
-  version: 8.4.1
-  resolution: "@octokit/webhooks@npm:8.4.1"
+"@octokit/webhooks-types@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@octokit/webhooks-types@npm:5.2.0"
+  checksum: ac0cdabee05f616c05dd6810098ec5698ef1b7db47d02f09405fe6d61a640e92e12eb01a6991e4bd0499d7d07ce172cbbed1107daaf068c4cae74e835cc5649b
+  languageName: node
+  linkType: hard
+
+"@octokit/webhooks@npm:^9.22.0":
+  version: 9.22.0
+  resolution: "@octokit/webhooks@npm:9.22.0"
   dependencies:
     "@octokit/request-error": ^2.0.2
-    "@octokit/webhooks-definitions": 3.61.0
+    "@octokit/webhooks-methods": ^2.0.0
+    "@octokit/webhooks-types": 5.2.0
     aggregate-error: ^3.1.0
-    debug: ^4.0.0
-  checksum: 14c7a8550c354ea10454cdd1bfedf76bed7c28e0099ebb6e0cdb4d08b8e5a9c75beb03f58e7f7bd80d20a338599451fc52fc64ff878a9e432b9697a3a6a06146
+  checksum: 3fc4bdb42d36c6de2086a99ce3c0e97f0ba90d5a195db026ca1b9551c5006267889c03f91c00bd3648edd9e5b5acbd483b38f018d99bca9b2fa74373bbea30bb
   languageName: node
   linkType: hard
 
@@ -1284,10 +1316,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14.14.31":
-  version: 14.14.31
-  resolution: "@types/node@npm:14.14.31"
-  checksum: 635dc8a0898a923621e02ca179e17baa39fdfa44f0096fcc1b7046c9b32317e74a99956a7b45ca0e8069874f51f4e7873a418239a318a4b6e7936f6510ac5992
+"@types/node@npm:^17.0.21":
+  version: 17.0.21
+  resolution: "@types/node@npm:17.0.21"
+  checksum: 723ec4551e972bee4c888329051be36d94670fdc5516a2870951702276775887bf4b16baf8e8e19382262666cadde15247b5c61b8120947ad5551b57fa0a6d8c
   languageName: node
   linkType: hard
 
@@ -2304,7 +2336,7 @@ __metadata:
   resolution: "cloudbuild-task-azp@workspace:cloudbuild-task-azp"
   dependencies:
     "@types/jest": ^26.0.20
-    "@types/node": ^14.14.31
+    "@types/node": ^17.0.21
     azure-pipelines-task-lib: ^3.1.10
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.6.3
@@ -2320,7 +2352,7 @@ __metadata:
   resolution: "cloudbuild-task-contracts@workspace:cloudbuild-task-contracts"
   dependencies:
     "@types/jest": ^26.0.20
-    "@types/node": ^14.14.31
+    "@types/node": ^17.0.21
     jest: ^26.4.2
     jshint: ^2.12.0
     ts-jest: ^26.5.2
@@ -2333,14 +2365,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions"
   dependencies:
-    "@actions/core": ^1.2.6
+    "@actions/core": ^1.6.0
     "@actions/exec": ^1.0.4
     "@actions/github": ^4.0.0
-    "@actions/io": ^1.0.2
+    "@actions/io": ^1.1.1
     "@actions/tool-cache": ^1.6.1
-    "@octokit/webhooks": ^8.4.1
+    "@octokit/webhooks": ^9.22.0
     "@types/jest": ^26.0.20
-    "@types/node": ^14.14.31
+    "@types/node": ^17.0.21
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.6.3
     jshint: ^2.12.0
@@ -2355,13 +2387,13 @@ __metadata:
   resolution: "cloudbuild-task-local@workspace:cloudbuild-task-local"
   dependencies:
     "@types/jest": ^26.0.20
-    "@types/node": ^14.14.31
+    "@types/node": ^17.0.21
     "@types/stream-buffers": ^3.0.3
     child_process: ^1.0.2
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^26.6.3
     jshint: ^2.12.0
-    simple-git: ^2.35.2
+    simple-git: ^3.2.6
     stream-buffers: ^3.0.2
     tmp-promise: ^3.0.2
     ts-jest: ^26.5.2
@@ -2623,7 +2655,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1":
+"debug@npm:^4.1.0, debug@npm:^4.1.1":
   version: 4.2.0
   resolution: "debug@npm:4.2.0"
   dependencies:
@@ -2637,15 +2669,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.3.2":
-  version: 4.3.2
-  resolution: "debug@npm:4.3.2"
+"debug@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "debug@npm:4.3.3"
   dependencies:
     ms: 2.1.2
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: 5543570879e2274f6725d4285a034d6e0822d35faefc6f55965933fb440e8c21eb3a0bef934e66f4b6b491f898ee2de37cab980e9d4fd61372136c19d3ce4527
+  checksum: 1bceffaa69207300c49f868643a4f637a20dd292fe005fb0d5a625957ee1fe7a4e65c5f4c6f65ce2b1ef30087cf4e327207d4e0554362e4c44574f85328e3b71
   languageName: node
   linkType: hard
 
@@ -6651,14 +6683,14 @@ resolve@^1.18.1:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^2.35.2":
-  version: 2.35.2
-  resolution: "simple-git@npm:2.35.2"
+"simple-git@npm:^3.2.6":
+  version: 3.2.6
+  resolution: "simple-git@npm:3.2.6"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
-    debug: ^4.3.2
-  checksum: cc433d438f0d77bb630ccf1e5b9044cf61e7f8f08fbdff6785fff6b6cfc5ff02583bfb026f24886ee92990010b8ccb2e932bc9e32c654ccbd99252b0addd967e
+    debug: ^4.3.3
+  checksum: 85d38c32f80a337566fccf27bbf62a3d0456a25dfce12da2496b994b047595697a8703db84a0269dd2d25ca2d73aaac9e3862f152aba7618bab3a835ed60d0c8
   languageName: node
   linkType: hard
 
