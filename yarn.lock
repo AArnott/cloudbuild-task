@@ -1021,6 +1021,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/openapi-types@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "@octokit/openapi-types@npm:14.0.0"
+  checksum: 405c07303c078d398a4473aaf89361bca1f31c0f7f6dbdfde2f342b04f6e98cbf7876d98b4557287618f0cfd5cd3101937added948653d288d5cd4bfc54e050c
+  languageName: node
+  linkType: hard
+
 "@octokit/plugin-paginate-rest@npm:^2.13.3":
   version: 2.17.0
   resolution: "@octokit/plugin-paginate-rest@npm:2.17.0"
@@ -1044,17 +1051,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/request-error@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@octokit/request-error@npm:2.0.2"
-  dependencies:
-    "@octokit/types": ^5.0.1
-    deprecation: ^2.0.0
-    once: ^1.4.0
-  checksum: 3ba45b317978025ae5e1afcdd288276e00c199088df7f6b21d0d954ff6f14419057aa5fdd0fd38a8cc2b1335ce41f1937ada3a67cd262af0d9cabcde265f2969
-  languageName: node
-  linkType: hard
-
 "@octokit/request-error@npm:^2.0.5, @octokit/request-error@npm:^2.1.0":
   version: 2.1.0
   resolution: "@octokit/request-error@npm:2.1.0"
@@ -1063,6 +1059,17 @@ __metadata:
     deprecation: ^2.0.0
     once: ^1.4.0
   checksum: 0fdf0075bce449f07a376eae9e623f10859943ffcb8db4a97e5052ea09a16a9fc5c009153f750efc6ba3b0ca5f068b975b0d9eca180405533a6af78d318001fd
+  languageName: node
+  linkType: hard
+
+"@octokit/request-error@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "@octokit/request-error@npm:3.0.2"
+  dependencies:
+    "@octokit/types": ^8.0.0
+    deprecation: ^2.0.0
+    once: ^1.4.0
+  checksum: da86fcd1a27a7d5ba45d10efb9e4ffa8daa7c4f6e82ba3c6274c628e68973222a760b9b8c7f82203df51d5d2261ee2faca878db6f75091b4fd3b2f9a6f6d3182
   languageName: node
   linkType: hard
 
@@ -1080,7 +1087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^5.0.0, @octokit/types@npm:^5.0.1":
+"@octokit/types@npm:^5.0.0":
   version: 5.4.1
   resolution: "@octokit/types@npm:5.4.1"
   dependencies:
@@ -1098,29 +1105,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/webhooks-methods@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@octokit/webhooks-methods@npm:2.0.0"
-  checksum: b99e19cb0734e3e0b8354c6c34327f647f189678453771b415ebd6049978444c7f14ad8a6fa5b4885cf34626fb6848d57287bd2b40dce6f3923926cf0f1e49ad
-  languageName: node
-  linkType: hard
-
-"@octokit/webhooks-types@npm:5.2.0":
-  version: 5.2.0
-  resolution: "@octokit/webhooks-types@npm:5.2.0"
-  checksum: ac0cdabee05f616c05dd6810098ec5698ef1b7db47d02f09405fe6d61a640e92e12eb01a6991e4bd0499d7d07ce172cbbed1107daaf068c4cae74e835cc5649b
-  languageName: node
-  linkType: hard
-
-"@octokit/webhooks@npm:^9.22.0":
-  version: 9.22.0
-  resolution: "@octokit/webhooks@npm:9.22.0"
+"@octokit/types@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@octokit/types@npm:8.0.0"
   dependencies:
-    "@octokit/request-error": ^2.0.2
-    "@octokit/webhooks-methods": ^2.0.0
-    "@octokit/webhooks-types": 5.2.0
+    "@octokit/openapi-types": ^14.0.0
+  checksum: cf6076e426a6e84d44da556a15f423b5bfce3abec4c2faeb299e82dfab87da4da5a4e28f984770cb6fea285df395734f814a6b5705c012222f5179d11a163b93
+  languageName: node
+  linkType: hard
+
+"@octokit/webhooks-methods@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "@octokit/webhooks-methods@npm:3.0.1"
+  checksum: ab87e979cf089cef5129f5b05530586120bb328776e07be19b62c827fc4bf838f20466643d6b4ecd1f70ff65cac5c09c730eb4e503f9694c240fa892c618405c
+  languageName: node
+  linkType: hard
+
+"@octokit/webhooks-types@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@octokit/webhooks-types@npm:6.6.0"
+  checksum: b887d2a075773a8018306a904a0ee0823deeee7dde9a44dfb28195038b4ff88c1f41bda7615a9459282362b74230a9c9c3380fdc5cc6b6dbd1a174b7beaeb401
+  languageName: node
+  linkType: hard
+
+"@octokit/webhooks@npm:^10.3.1":
+  version: 10.3.1
+  resolution: "@octokit/webhooks@npm:10.3.1"
+  dependencies:
+    "@octokit/request-error": ^3.0.0
+    "@octokit/webhooks-methods": ^3.0.0
+    "@octokit/webhooks-types": 6.6.0
     aggregate-error: ^3.1.0
-  checksum: 3fc4bdb42d36c6de2086a99ce3c0e97f0ba90d5a195db026ca1b9551c5006267889c03f91c00bd3648edd9e5b5acbd483b38f018d99bca9b2fa74373bbea30bb
+  checksum: c761732a0894725bd520ec53720edcb088f0567096ea171c5fe94f1d076e458c25ff83c3e256780263de9d7b4a4b7a3f0ff9b50b5f7cabdae27a5de348aa8a56
   languageName: node
   linkType: hard
 
@@ -2407,7 +2423,7 @@ __metadata:
     "@actions/github": ^5.0.0
     "@actions/io": ^1.1.1
     "@actions/tool-cache": ^1.6.1
-    "@octokit/webhooks": ^9.22.0
+    "@octokit/webhooks": ^10.3.1
     "@types/jest": ^26.0.20
     "@types/node": ^17.0.21
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
