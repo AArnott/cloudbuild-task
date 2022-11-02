@@ -61,12 +61,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/http-client@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "@actions/http-client@npm:1.0.8"
+"@actions/http-client@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@actions/http-client@npm:2.0.1"
   dependencies:
-    tunnel: 0.0.6
-  checksum: e5b59315b93f2b1e3f45353a6fbf5869a9cef7e5b5cc79372084607069087e09af69a85745adefeca996c38470f04e2a781bed4ce42725798df0cdfd60565a58
+    tunnel: ^0.0.6
+  checksum: 5dd4b34b256047f96fde34e6a8d73666ae18c5fd8d87a59173ba373698cc9a151f0e35f03fa1dfb5dd7d50b410a0d22cfe0239278b6ae347edd6e5fa8109d931
   languageName: node
   linkType: hard
 
@@ -93,17 +93,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/tool-cache@npm:^1.6.1":
-  version: 1.6.1
-  resolution: "@actions/tool-cache@npm:1.6.1"
+"@actions/tool-cache@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@actions/tool-cache@npm:2.0.1"
   dependencies:
     "@actions/core": ^1.2.6
     "@actions/exec": ^1.0.0
-    "@actions/http-client": ^1.0.8
-    "@actions/io": ^1.0.1
+    "@actions/http-client": ^2.0.1
+    "@actions/io": ^1.1.1
     semver: ^6.1.0
     uuid: ^3.3.2
-  checksum: 88e38204091cbbee1d2241fc8e9548da25b3f5f56d4301f7dae353036d427d2cd459a8884d9c983c24dd0786d0e0cf2e2b4b9bf6f258438c704b8077f99b7d08
+  checksum: a7f130b321f6839138007298dca8375a0dfc9ccd519a32159784d6a09cdfe460a12b2895083d43e43ac2f4d2d8ae24860b31a57d31eef03fef0e98ea7950220e
   languageName: node
   linkType: hard
 
@@ -2480,7 +2480,7 @@ __metadata:
     "@actions/exec": ^1.1.0
     "@actions/github": ^5.1.1
     "@actions/io": ^1.1.1
-    "@actions/tool-cache": ^1.6.1
+    "@actions/tool-cache": ^2.0.1
     "@octokit/webhooks": ^10.3.1
     "@types/jest": ^26.0.20
     "@types/node": ^17.0.21
