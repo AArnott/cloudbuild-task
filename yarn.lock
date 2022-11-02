@@ -12,12 +12,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/core@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@actions/core@npm:1.6.0"
+"@actions/core@npm:^1.9.1":
+  version: 1.10.0
+  resolution: "@actions/core@npm:1.10.0"
   dependencies:
-    "@actions/http-client": ^1.0.11
-  checksum: 71533cc514e4a158cea7c855610a44376814cc1b897f600aaf97636fc1bf49956bd4f7ef8f1cd04beefe8baa5d001aea40aadafbcbc6b36a62840bc25082e4c4
+    "@actions/http-client": ^2.0.1
+    uuid: ^8.3.2
+  checksum: 6a9908c1906167df4369891f5a2a6e66202a824b27e5ddbf5823841a044a2c757dfe1c3dcc7544be708fa6bbd0d3b15fa789fe9f0b308b0560636f8ea865f5d9
   languageName: node
   linkType: hard
 
@@ -66,6 +67,15 @@ __metadata:
   dependencies:
     tunnel: 0.0.6
   checksum: e5b59315b93f2b1e3f45353a6fbf5869a9cef7e5b5cc79372084607069087e09af69a85745adefeca996c38470f04e2a781bed4ce42725798df0cdfd60565a58
+  languageName: node
+  linkType: hard
+
+"@actions/http-client@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@actions/http-client@npm:2.0.1"
+  dependencies:
+    tunnel: ^0.0.6
+  checksum: 5dd4b34b256047f96fde34e6a8d73666ae18c5fd8d87a59173ba373698cc9a151f0e35f03fa1dfb5dd7d50b410a0d22cfe0239278b6ae347edd6e5fa8109d931
   languageName: node
   linkType: hard
 
@@ -2418,7 +2428,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task-github-actions@workspace:cloudbuild-task-github-actions"
   dependencies:
-    "@actions/core": ^1.6.0
+    "@actions/core": ^1.9.1
     "@actions/exec": ^1.1.0
     "@actions/github": ^5.0.0
     "@actions/io": ^1.1.1
@@ -7580,6 +7590,15 @@ typescript@^4.2.2:
   bin:
     uuid: dist/bin/uuid
   checksum: a2bdb8a3eb80a53506e9657e7e1f70d7600562bf43fa010a645fd1deb7de1686df61c496c6f9826bac4be8db4d1ac1b976dd6fdf3bd083207eec1674507936fb
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: aed2bcef341f95635f308fea8831fb9038b18c485fe7e71feb89d2e05602dfecad0cb6f2246fae096d4da425cca6e8a71056f28abd97ad98cf770a2018853248
   languageName: node
   linkType: hard
 
