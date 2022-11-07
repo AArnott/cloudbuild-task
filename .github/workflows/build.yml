@@ -30,10 +30,10 @@ jobs:
         restore-keys: ${{ runner.os }}-yarn-
     - uses: dotnet/nbgv@v0.4
       id: nbgv
-    - name: Use Node.js 14.x
+    - name: Use Node.js 18.x
       uses: actions/setup-node@v1
       with:
-        node-version: 14.x
+        node-version: 18.x
         registry-url: https://npm.pkg.github.com
     - run: yarn --immutable
     - name: Build
