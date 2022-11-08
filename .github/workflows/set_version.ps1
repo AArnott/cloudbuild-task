@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 [CmdletBinding(SupportsShouldProcess = $true)]
 Param (
 	[Parameter(Mandatory = $true)]
