@@ -1726,18 +1726,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-pipelines-task-lib@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "azure-pipelines-task-lib@npm:3.2.0"
+"azure-pipelines-task-lib@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "azure-pipelines-task-lib@npm:3.3.1"
   dependencies:
-    minimatch: 3.0.4
+    minimatch: 3.0.5
     mockery: ^1.7.0
     q: ^1.5.1
     semver: ^5.1.0
     shelljs: ^0.8.5
     sync-request: 6.1.0
     uuid: ^3.0.1
-  checksum: 21d6312d8a178c669c759840447156bf692662b23ac9d5ca63bdfcc6f132c666b976f1f214c9c0210fd8e4ae5c5fab4dc411d52ea4b8cbe4fdecd31ca0a93e46
+  checksum: 62b0741784543fe1d10e5b293709692841aeefa28dcdffdf09afc2a22e4d01f7dcd2877ba0c0aa60a676781154b56f543a70d6600788f1a069264988db932bc6
   languageName: node
   linkType: hard
 
@@ -2103,7 +2103,7 @@ __metadata:
   dependencies:
     "@types/jest": ^29.2.2
     "@types/node": ^18.11.9
-    azure-pipelines-task-lib: ^3.2.0
+    azure-pipelines-task-lib: ^3.3.1
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^29.3.0
     jshint: ^2.13.5
@@ -4130,7 +4130,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:3.0.4, minimatch@npm:^3.0.4, minimatch@npm:~3.0.2":
+"minimatch@npm:3.0.5":
+  version: 3.0.5
+  resolution: "minimatch@npm:3.0.5"
+  dependencies:
+    brace-expansion: ^1.1.7
+  checksum: a3b84b426eafca947741b864502cee02860c4e7b145de11ad98775cfcf3066fef422583bc0ffce0952ddf4750c1ccf4220b1556430d4ce10139f66247d87d69e
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^3.0.4, minimatch@npm:~3.0.2":
   version: 3.0.4
   resolution: "minimatch@npm:3.0.4"
   dependencies:
