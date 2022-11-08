@@ -22,21 +22,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/exec@npm:^1.0.0":
-  version: 1.0.4
-  resolution: "@actions/exec@npm:1.0.4"
+"@actions/exec@npm:^1.0.0, @actions/exec@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "@actions/exec@npm:1.1.1"
   dependencies:
     "@actions/io": ^1.0.1
-  checksum: 99e3a90a24ae157bc77f5e933d82caba5b8deee979e8489e534db75ffab08a2758f625e83f020736b031eca054ac3710b9f18cea5c9123f69457bb0582094c3e
-  languageName: node
-  linkType: hard
-
-"@actions/exec@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@actions/exec@npm:1.1.0"
-  dependencies:
-    "@actions/io": ^1.0.1
-  checksum: a363efff6aa00d7c4cf57367d1f2ee8a73cf81cfb4b9c824df960dc1665ed13d3a7ac54398043a90e9be8117c4d978078c5eff6dea529d842e55d18e55356b7f
+  checksum: 55a3846945d26b096ce3404e7716d864a7209709f8c5af3f2e8cb23162d8cbce11e593842f6daaf2170a68e3d0c8be37fb96251d9559c48a19b753de163bf13b
   languageName: node
   linkType: hard
 
@@ -61,17 +52,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/io@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "@actions/io@npm:1.0.2"
-  checksum: ccf358b298c115867061985a2ff1169f5565cde5d00af49ede272a0271001cb16165269f59742c720eb07a2d6f8faf05ec078895e38286a9dbabb40a518a776f
-  languageName: node
-  linkType: hard
-
-"@actions/io@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@actions/io@npm:1.1.1"
-  checksum: eb23d40a50f93842fbdbbd9f82ed2bfcb0558c6a253d9d44cfb0a09d235deb8c2caf2e97f79359abeff9ed45239f108a9e329f5a71dfd01ddfb88d15ab057ad7
+"@actions/io@npm:^1.0.1, @actions/io@npm:^1.1.1, @actions/io@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@actions/io@npm:1.1.2"
+  checksum: d1a1f1f8cc4e3868a3730c29d317073d25c1a3da18f44c9f08fbccb195f88ca9c65562386bea812b9d0c56e9fcd8d2cc63f3ffed37e213c087ec98f497744a08
   languageName: node
   linkType: hard
 
@@ -2461,7 +2445,7 @@ __metadata:
     "@actions/core": ^1.9.1
     "@actions/exec": ^1.1.0
     "@actions/github": ^5.1.1
-    "@actions/io": ^1.1.1
+    "@actions/io": ^1.1.2
     "@actions/tool-cache": ^2.0.1
     "@octokit/webhooks": ^10.3.1
     "@types/jest": ^26.0.20
