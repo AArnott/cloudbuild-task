@@ -1312,13 +1312,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.2.3":
-  version: 29.2.3
-  resolution: "@types/jest@npm:29.2.3"
+"@types/jest@npm:^29.2.5":
+  version: 29.2.5
+  resolution: "@types/jest@npm:29.2.5"
   dependencies:
     expect: ^29.0.0
     pretty-format: ^29.0.0
-  checksum: 55370906711b600a05b9e497c22aa74d80d8adcdbe4ac2f1bc9311f6f6ca0dd192862b6f38df6ac0d45e92396bcd796e377b1d8058c10bdfd584aeee580c3ce1
+  checksum: d668470f00ec4cb8b8457f1fd90f7358fad8f22d74b85006dad6be522d6b9bf10f49f597e88d1d1a518d211c1b65be32a1f27f0e49ce0658d110a9206b8ea310
   languageName: node
   linkType: hard
 
@@ -2124,7 +2124,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task-azp@workspace:cloudbuild-task-azp"
   dependencies:
-    "@types/jest": ^29.2.3
+    "@types/jest": ^29.2.5
     "@types/node": ^18.11.18
     azure-pipelines-task-lib: ^3.3.1
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
@@ -2140,7 +2140,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task-contracts@workspace:cloudbuild-task-contracts"
   dependencies:
-    "@types/jest": ^29.2.3
+    "@types/jest": ^29.2.5
     "@types/node": ^18.11.18
     jest: ^29.3.1
     jshint: ^2.13.6
@@ -2160,7 +2160,7 @@ __metadata:
     "@actions/io": ^1.1.2
     "@actions/tool-cache": ^2.0.1
     "@octokit/webhooks": ^10.4.0
-    "@types/jest": ^29.2.3
+    "@types/jest": ^29.2.5
     "@types/node": ^18.11.18
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^29.3.1
@@ -2175,7 +2175,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task-local@workspace:cloudbuild-task-local"
   dependencies:
-    "@types/jest": ^29.2.3
+    "@types/jest": ^29.2.5
     "@types/node": ^18.11.18
     "@types/stream-buffers": ^3.0.4
     child_process: ^1.0.2
@@ -2195,7 +2195,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cloudbuild-task@workspace:."
   dependencies:
-    "@types/jest": ^29.2.3
+    "@types/jest": ^29.2.5
     "@yarnpkg/pnpify": ^3.1.6
     jest: ^29.3.1
     jshint: ^2.13.6
