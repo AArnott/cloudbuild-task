@@ -1749,18 +1749,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"azure-pipelines-task-lib@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "azure-pipelines-task-lib@npm:3.3.1"
+"azure-pipelines-task-lib@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "azure-pipelines-task-lib@npm:4.2.0"
   dependencies:
     minimatch: 3.0.5
-    mockery: ^1.7.0
+    mockery: ^2.1.0
     q: ^1.5.1
     semver: ^5.1.0
     shelljs: ^0.8.5
     sync-request: 6.1.0
     uuid: ^3.0.1
-  checksum: 62b0741784543fe1d10e5b293709692841aeefa28dcdffdf09afc2a22e4d01f7dcd2877ba0c0aa60a676781154b56f543a70d6600788f1a069264988db932bc6
+  checksum: cae85c12daf68d2c18e7c5d1ec48b4e6d6c89b3d95895fd201937b6f6d2ca238714152b4551bd56824f553f636d05e1366ed3c555b087be88c6f1b43d123f28f
   languageName: node
   linkType: hard
 
@@ -2126,7 +2126,7 @@ __metadata:
   dependencies:
     "@types/jest": ^29.2.5
     "@types/node": ^18.11.18
-    azure-pipelines-task-lib: ^3.3.1
+    azure-pipelines-task-lib: ^4.2.0
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^29.3.1
     jshint: ^2.13.6
@@ -4287,10 +4287,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mockery@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "mockery@npm:1.7.0"
-  checksum: 76cc7dc2b998b634e05b06827458c022ac1267229b8be302cdcf6c2fd9c0b7989b495c3f0c8e53418a186b9c54252da1660f883e37a98a064c9a7ebeff3e4d54
+"mockery@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "mockery@npm:2.1.0"
+  checksum: 2454348d891fc8a6f2ff8d60776372461b8a129e1feb2ee19052190add2a28216b91a28c8403040c52ce1e7ec337fb03387f31ecd644af3edcc325ec80da9bcc
   languageName: node
   linkType: hard
 
