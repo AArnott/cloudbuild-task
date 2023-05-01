@@ -28,7 +28,7 @@
 		"@actions/github": "^5.1.1",
 		"@actions/io": "^1.1.3",
 		"@actions/tool-cache": "^2.0.1",
-		"@octokit/webhooks": "^10.7.0",
+		"@octokit/webhooks": "^11.0.0",
 		"cloudbuild-task-contracts": "workspace:cloudbuild-task-contracts"
 	},
 	"devDependencies": {
