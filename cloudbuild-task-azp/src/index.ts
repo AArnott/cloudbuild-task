@@ -40,7 +40,7 @@ class AzurePipelinesFactory implements contracts.CloudTask {
 				id: id,
 				sourceBranch: {
 					ref: task.getVariable('System.PullRequest.SourceBranch')!,
-					sha: undefined, // No documented way to look this up.
+					sha: task.getVariable('System.PullRequest.SourceCommitId')!,
 				},
 				targetBranch: {
 					ref: task.getVariable('System.PullRequest.TargetBranch')!,
