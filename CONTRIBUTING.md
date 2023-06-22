@@ -35,7 +35,7 @@ To configure *your* VS Code IDE's language service to work in this repo, complet
 Another caveat to not using `node_modules` is that F12 Go to Definition on imported types cannot jump to imported modules.
 VS Code has [fixing this on their backlog](https://github.com/microsoft/vscode/issues/75559). Please vote it up.
 
-You may need to occasionally run `yarn dlx @yarnpkg/pnpify --sdk vscode` after updating yarn or the typescript version to keep everything in sync.
+You may need to occasionally run `yarn dlx @yarnpkg/sdks` after updating yarn or the typescript version to keep everything in sync.
 
 ## Build
 
