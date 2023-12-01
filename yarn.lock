@@ -2222,7 +2222,7 @@ __metadata:
     cloudbuild-task-contracts: "workspace:cloudbuild-task-contracts"
     jest: ^29.6.4
     jshint: ^2.13.6
-    simple-git: ^3.19.1
+    simple-git: ^3.21.0
     stream-buffers: ^3.0.2
     tmp-promise: ^3.0.3
     ts-jest: ^29.1.1
@@ -5204,14 +5204,14 @@ resolve@^1.3.2:
   languageName: node
   linkType: hard
 
-"simple-git@npm:^3.19.1":
-  version: 3.19.1
-  resolution: "simple-git@npm:3.19.1"
+"simple-git@npm:^3.21.0":
+  version: 3.21.0
+  resolution: "simple-git@npm:3.21.0"
   dependencies:
     "@kwsites/file-exists": ^1.1.1
     "@kwsites/promise-deferred": ^1.1.1
     debug: ^4.3.4
-  checksum: ab7c6901130eadd5758c5f1b0d957573b13cd981549cb5853e757cf13f8cb53b79a50e1acde8eaceba88da814d252f90cf7feab9bd67c64db903250adc51b02f
+  checksum: e992d2ac5905c19d385ebb8575db92886c93e677acfb9edb28a842d05b7a3974ef34cc26ccb8057144099a1c5875070867456787aef5bf641a99ebfb9ef656bf
   languageName: node
   linkType: hard
 
